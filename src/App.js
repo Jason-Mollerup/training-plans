@@ -1,4 +1,5 @@
 import './App.css'
+import running from './running.svg'
 import { useState } from 'react'
 
 const dayTypes = {
@@ -48,7 +49,7 @@ const dayTypes = {
 const styles = {
   header: {
     padding: '25px 0px',
-    borderBottom: '0.1rem solid lightgray',
+    boxShadow: '0 2px 3px rgba(0, 0, 0, .15)',
     fontSize: 'Larger',
     position: 'sticky',
     top: '0px',
@@ -57,7 +58,7 @@ const styles = {
   },
   inputWrapper: {
     fontSize: 'small',
-    marginTop: '10px',
+    margin: '10px 25px 0',
   },
   input: {
     fontSize: 'small',
@@ -96,7 +97,6 @@ const styles = {
     padding: '5px',
     textAlign: 'center',
     borderRadius: '100px',
-    backgroundColor: '#6C757D',
     color: 'white',
     display: 'flex',
     flexDirection: 'column',
@@ -155,9 +155,9 @@ const secondsToTime = (seconds) => {
 }
 
 const timeObjToSeconds = (obj) => {
-  const hours = isNaN(obj.hours) ? 0 : obj.hours
-  const minutes = isNaN(obj.minutes) ? 0 : obj.minutes
-  const seconds = isNaN(obj.seconds) ? 0 : obj.seconds
+  const hours = isNaN(parseInt(obj.hours)) ? 0 : parseInt(obj.hours)
+  const minutes = isNaN(parseInt(obj.minutes)) ? 0 : parseInt(obj.minutes)
+  const seconds = isNaN(parseInt(obj.seconds)) ? 0 : parseInt(obj.seconds)
   return (hours * 3600) + (minutes * 60) + seconds
 }
 
@@ -179,29 +179,33 @@ const checkToday = (date, days) => {
 }
 
 const defaultFiveK = {
-  hours: 0,
-  minutes: 30,
-  seconds: 0,
+  hours: '00',
+  minutes: '30',
+  seconds: '00',
 }
 
 const defaultTenK = {
-  hours: 1,
-  minutes: 10,
-  seconds: 0,
+  hours: '01',
+  minutes: '10',
+  seconds: '00',
 }
 
 function App() {
-  const [fiveK, setFiveK] = useState(timeObjToSeconds(JSON.parse(localStorage.getItem('fiveKTimes')) || defaultFiveK))
-  const [tenK, setTenK] = useState(timeObjToSeconds(JSON.parse(localStorage.getItem('tenKTimes')) || defaultTenK))
+  const initialFiveK = JSON.parse(localStorage.getItem('fiveKTimes')) || defaultFiveK
+  // const initialTenK = JSON.parse(localStorage.getItem('tenKTimes')) || defaultTenK
+  const initialTenK = defaultTenK
+
+  const [fiveK, setFiveK] = useState(timeObjToSeconds(initialFiveK))
+  const [tenK, setTenK] = useState(timeObjToSeconds(initialTenK))
   const startDate = new Date(2022, 9, 24)
 
-  const [fiveKTimes, setFiveKTimes] = useState(JSON.parse(localStorage.getItem('fiveKTimes')) || defaultFiveK)
-  const [tenKTimes, setTenKTimes] = useState(JSON.parse(localStorage.getItem('tenKTimes')) || defaultTenK)
+  const [fiveKTimes, setFiveKTimes] = useState(initialFiveK)
+  const [tenKTimes, setTenKTimes] = useState(initialTenK)
 
   const handleTime = (e, type, unit) => {
-    const val = parseInt(e.target.value)
+    const val = (e.target.value === '' || !e.target.value) ? '' : parseInt(e.target.value)
     const value = isNaN(val) ? 0 : val
-    let valueForUse = val
+    let valueForUse = value
     if (unit === 'hours' && value > 23) {
       valueForUse = 23
     }
@@ -228,6 +232,25 @@ function App() {
       setTenKTimes(tempTenK)
       setTenK(timeObjToSeconds(tempTenK))
       localStorage.setItem('tenKTimes', JSON.stringify(tempTenK))
+    }
+  }
+
+  const handleFocus = (e) => e.target.select()
+
+  const handleBlur = () => {
+    console.log('blur')
+    setTenKTimes(addLeadingZeros(structuredClone(tenKTimes)))
+    setFiveKTimes(addLeadingZeros(structuredClone(fiveKTimes)))
+  }
+
+  const addLeadingZeros = (obj) => {
+    const hours = isNaN(parseInt(obj.hours)) ? 0 : parseInt(obj.hours)
+    const minutes = isNaN(parseInt(obj.minutes)) ? 0 : parseInt(obj.minutes)
+    const seconds = isNaN(parseInt(obj.seconds)) ? 0 : parseInt(obj.seconds)
+    return {
+      hours: hours < 10 ? `0${hours}` : hours,
+      minutes: minutes < 10 ? `0${minutes}` : minutes,
+      seconds: seconds < 10 ? `0${seconds}` : seconds
     }
   }
 
@@ -417,56 +440,77 @@ function App() {
     <div className='App'>
       <div style={styles.wrapper}>
         <div style={styles.header}>
-          <div>
-            Half Marathon Training Plan
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <span>Half Marathon Training Plan</span>
+            <img style={{ width: '20px', marginLeft: '10px' }} src={running} alt='running'/>
           </div>
-          <div style={styles.inputWrapper}>
-            <span>5K Time: </span>
-            <input style={styles.input}
-              type='number'
-              min='0'
-              max='24'
-              value={fiveKTimes.hours}
-              onChange={(e) => handleTime(e, 'fiveK', 'hours')}
-            /><span>:</span>
-            <input style={styles.input}
-              type='number'
-              min='0'
-              max='59'
-              value={fiveKTimes.minutes}
-              onChange={(e) => handleTime(e, 'fiveK', 'minutes')}
-            /><span>:</span>
-            <input style={styles.input}
-              type='number'
-              min='0'
-              max='59'
-              value={fiveKTimes.seconds}
-              onChange={(e) => handleTime(e, 'fiveK', 'seconds')}
-            />
-          </div>
-          <div style={styles.inputWrapper}>
-            <span>10K Time: </span>
-            <input style={styles.input}
-              type='number'
-              min='0'
-              max='24'
-              value={tenKTimes.hours}
-              onChange={(e) => handleTime(e, 'tenK', 'hours')}
-            /><span>:</span>
-            <input style={styles.input}
-              type='number'
-              min='0'
-              max='59'
-              value={tenKTimes.minutes}
-              onChange={(e) => handleTime(e, 'tenK', 'minutes')}
-            /><span>:</span>
-            <input style={styles.input}
-              type='number'
-              min='0'
-              max='59'
-              value={tenKTimes.seconds}
-              onChange={(e) => handleTime(e, 'tenK', 'seconds')}
-            />
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            width: 'calc(100% - 50px)',
+            justifyContent: 'center',
+            margin: '0 25px'
+          }}>
+            <div style={styles.inputWrapper}>
+              <span>5K Time: </span>
+              <input style={styles.input}
+                type='number'
+                min='0'
+                max='24'
+                value={fiveKTimes.hours}
+                onChange={(e) => handleTime(e, 'fiveK', 'hours')}
+                onBlur={handleBlur}
+                onFocus={handleFocus}
+              /><span>:</span>
+              <input style={styles.input}
+                type='number'
+                min='0'
+                max='59'
+                value={fiveKTimes.minutes}
+                onChange={(e) => handleTime(e, 'fiveK', 'minutes')}
+                onBlur={handleBlur}
+                onFocus={handleFocus}
+              /><span>:</span>
+              <input style={styles.input}
+                type='number'
+                min='0'
+                max='59'
+                value={fiveKTimes.seconds}
+                onChange={(e) => handleTime(e, 'fiveK', 'seconds')}
+                onBlur={handleBlur}
+                onFocus={handleFocus}
+              />
+            </div>
+            <div style={styles.inputWrapper}>
+              <span>10K Time: </span>
+              <input style={styles.input}
+                type='number'
+                min='0'
+                max='24'
+                value={tenKTimes.hours}
+                onChange={(e) => handleTime(e, 'tenK', 'hours')}
+                onBlur={handleBlur}
+                onFocus={handleFocus}
+              /><span>:</span>
+              <input style={styles.input}
+                type='number'
+                min='0'
+                max='59'
+                value={tenKTimes.minutes}
+                onChange={(e) => handleTime(e, 'tenK', 'minutes')}
+                onBlur={handleBlur}
+                onFocus={handleFocus}
+              /><span>:</span>
+              <input style={styles.input}
+                type='number'
+                min='0'
+                max='59'
+                value={tenKTimes.seconds}
+                onChange={(e) => handleTime(e, 'tenK', 'seconds')}
+                onBlur={handleBlur}
+                onFocus={handleFocus}
+              />
+            </div>
           </div>
         </div>
         {schedule.map(({ miles, type, workout, texts }, index) => {
@@ -474,9 +518,9 @@ function App() {
           const dateArr = dateToArr(startDate, index)
           return (
             <div key={index} style={styles.dayWrapper}>
-              <div style={isToday ? styles.dateToday : styles.date}>
+              <div style={isToday ? {...styles.dateToday, backgroundColor: dayTypes[type].dividerBackgroundColor } : styles.date}>
                 <div style={{fontSize: 'x-small', fontWeight: 'normal'}}>{dateArr[0]}</div>
-                <div>{dateArr[1]}</div>
+                <div style={{lineHeight: '14px'}}>{dateArr[1]}</div>
                 <div style={{fontSize: 'small'}}>{dateArr[2]}</div>
               </div>
               <div style={{
