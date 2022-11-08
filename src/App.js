@@ -18,13 +18,18 @@ const dayTypes = {
     dividerBackgroundColor: '#E76F51',
     backgroundColor: '#E76F51',
     color: 'white',
-    text: 'Hill Sprints: 4x15s (w6) 4x20s (w8) 6x15s (w10)',
+    text: null,
+    texts: [
+      'Hill Sprints: 4x15s',
+      'Hill Sprints: 4x20s',
+      'Hill Sprints: 6x15s',
+    ]
   },
   strides: {
     dividerBackgroundColor: '#2A9D8F',
     backgroundColor: '#2A9D8F',
     color: 'white',
-    text: 'Strides following run: 4 then build up to 6-8',
+    text: 'Strides after run: 4 then build to 6-8',
   },
   race: {
     dividerBackgroundColor: '#264653',
@@ -150,19 +155,16 @@ const secondsToTime = (seconds) => {
 }
 
 const timeObjToSeconds = (obj) => {
-  return (
-    obj.hours * 3600
-    + obj.minutes * 60
-    + obj.seconds
-  )
+  const hours = isNaN(obj.hours) ? 0 : obj.hours
+  const minutes = isNaN(obj.minutes) ? 0 : obj.minutes
+  const seconds = isNaN(obj.seconds) ? 0 : obj.seconds
+  return (hours * 3600) + (minutes * 60) + seconds
 }
 
-const dateToType = (date, days, type) => {
+const dateToArr = (date, days) => {
   const startDate = new Date(date)
   const newDate = new Date(startDate.setDate(startDate.getDate() + days))
-  return type === 'month'
-    ? newDate.toLocaleString('en-US', {month: 'short'})
-    : newDate.getDate()
+  return newDate.toString().split(' ').slice(0, 3)
 }
 
 const checkToday = (date, days) => {
@@ -351,7 +353,7 @@ function App() {
     { miles: 7, type: 'regular', workout: null },
     { miles: 0, type: 'off', workout: null },
     // Week 6
-    { miles: 4, type: 'sprints', workout: null },
+    { miles: 4, type: 'sprints', workout: null, texts: 0 },
     { miles: 5, type: 'workout', workout: workouts.sixA },
     { miles: 0, type: 'off', workout: null },
     { miles: 4, type: 'regular', workout: null },
@@ -367,7 +369,7 @@ function App() {
     { miles: 6.2, type: 'race', workout: workouts.sevenB },
     { miles: 0, type: 'off', workout: null },
     // Week 8
-    { miles: 5, type: 'sprints', workout: null },
+    { miles: 5, type: 'sprints', workout: null, texts: 1 },
     { miles: 6, type: 'workout', workout: workouts.eightA },
     { miles: 0, type: 'off', workout: null },
     { miles: 3, type: 'strides', workout: null },
@@ -383,7 +385,7 @@ function App() {
     { miles: 10, type: 'workout', workout: workouts.nineB },
     { miles: 0, type: 'off', workout: null },
     // Week 10
-    { miles: 5, type: 'sprints', workout: null },
+    { miles: 5, type: 'sprints', workout: null, texts: 2 },
     { miles: 8, type: 'workout', workout: workouts.tenA },
     { miles: 0, type: 'off', workout: null },
     { miles: 5, type: 'regular', workout: null },
@@ -391,7 +393,7 @@ function App() {
     { miles: 12, type: 'regular', workout: null },
     { miles: 0, type: 'off', workout: null },
     // Week 11
-    { miles: 5, type: 'sprints', workout: null },
+    { miles: 5, type: 'sprints', workout: null, texts: 2 },
     { miles: 7, type: 'workout', workout: workouts.elevenA },
     { miles: 0, type: 'off', workout: null },
     { miles: 3, type: 'strides', workout: null },
@@ -467,13 +469,15 @@ function App() {
             />
           </div>
         </div>
-        {schedule.map(({ miles, type, workout }, index) => {
+        {schedule.map(({ miles, type, workout, texts }, index) => {
           const isToday = checkToday(startDate, index)
+          const dateArr = dateToArr(startDate, index)
           return (
             <div key={index} style={styles.dayWrapper}>
               <div style={isToday ? styles.dateToday : styles.date}>
-                <div>{dateToType(startDate, index, 'month')}</div>
-                <div>{dateToType(startDate, index, 'day')}</div>
+                <div style={{fontSize: 'x-small', fontWeight: 'normal'}}>{dateArr[0]}</div>
+                <div>{dateArr[1]}</div>
+                <div style={{fontSize: 'small'}}>{dateArr[2]}</div>
               </div>
               <div style={{
                 ...styles.divider,
@@ -485,7 +489,7 @@ function App() {
                   color: dayTypes[type].color,
                   backgroundColor: dayTypes[type].backgroundColor
                 }}>
-                  {dayTypes[type].text}
+                  {type === 'sprints' ? dayTypes[type].texts[texts] : dayTypes[type].text}
                 </div>
                 {miles > 0 && (
                   <div style={styles.miles}>{miles} miles</div>
@@ -493,7 +497,7 @@ function App() {
                 {workout && (
                   <div style={styles.workoutWrapper}>
                     <div style={styles.notes}>{workout.notes}</div>
-                    {workout.time && (
+                    {workout.time !== null && workout.time !== 0 && (
                       <div style={styles.time}>@ {secondsToTime(workout.time)} time</div>
                     )}
                   </div>

@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+html,
+body,
+input,
+.App {
+  font-family: 'Nunito', sans-serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,6 +39,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
