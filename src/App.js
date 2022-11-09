@@ -81,7 +81,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     width: 'calc(100% - 30px)',
-    scrollMarginTop: '136px',
   },
   date: {
     minWidth: '50px',
@@ -219,6 +218,7 @@ function App() {
 
   const [fiveKTimes, setFiveKTimes] = useState(initialFiveK)
   const [tenKTimes, setTenKTimes] = useState(initialTenK)
+  const [scrollMarginTop, setScrollMarginTop] = useState('146px')
 
   const handleTime = (e, type, unit) => {
     const val = (e.target.value === '' || !e.target.value) ? '' : parseInt(e.target.value)
@@ -269,6 +269,11 @@ function App() {
       minutes: minutes < 10 ? `0${minutes}` : minutes,
       seconds: seconds < 10 ? `0${seconds}` : seconds
     }
+  }
+
+  const setScrollMargin = () => {
+    const height = document.getElementById('header').getClientRects()[0].height
+    setScrollMarginTop(`${height}px`)
   }
 
   const times = {
@@ -455,11 +460,11 @@ function App() {
 
   return (
     <div className='App'>
-      <a style={styles.todayButton} href='#today'>
+      <a style={styles.todayButton} href='#today' onClick={setScrollMargin}>
         <img style={{ width: '18px', color: 'white' }} src={todayIcon} alt='running'/>
       </a>
       <div style={styles.wrapper}>
-        <div style={styles.header}>
+        <div id='header' style={styles.header}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <span>Half Marathon Training Plan</span>
             <img style={{ width: '20px', marginLeft: '10px' }} src={runningIcon} alt='running'/>
@@ -543,7 +548,8 @@ function App() {
               style={{
                 ...styles.dayWrapper,
                 backgroundColor: type === 'off' ? '#EEEEEE' : 'unset',
-                color: type === 'off' ? '#6C757D' : 'unset'
+                color: type === 'off' ? '#6C757D' : 'unset',
+                scrollMarginTop: scrollMarginTop,
               }}
             >
               <div style={isToday ? {...styles.dateToday, backgroundColor: dayTypes[type].dividerBackgroundColor } : styles.date}>
