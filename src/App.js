@@ -76,11 +76,11 @@ const styles = {
     width: '100%',
   },
   dayWrapper: {
-    padding: '10px 15px',
+    padding: '10px',
     borderBottom: '0.05rem solid lightgray',
     display: 'flex',
     flexDirection: 'row',
-    width: 'calc(100% - 30px)',
+    width: 'calc(100% - 20px)',
   },
   date: {
     minWidth: '50px',
