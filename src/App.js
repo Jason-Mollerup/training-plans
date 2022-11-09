@@ -288,6 +288,7 @@ function App() {
     eightHundredMeter: tenK / 2.085 / 5000 * 800,
     sixteenHundredMeter: tenK / 2.085 / 5000 * 1609,
     tenKEightHundredMeter: tenK / 10000 * 800,
+    tenKSixteenHundredMeter: tenK / 10000 * 1609,
     halfMFourHundredMeter: (tenK * 2.2063) / 21097 * 400,
     halfMSixteenHundredMeter: (tenK * 2.2063) / 21097 * 1609,
   }
@@ -295,7 +296,7 @@ function App() {
   const workouts = {
     fourA: {
       time: times.mile * 1.05,
-      notes: '3x1 Mile with 90s recovery',
+      notes: '(3x) 1 Mile with 90s recovery',
     },
     fiveA: {
       time: times.mile * 1.14,
@@ -307,7 +308,7 @@ function App() {
     },
     sixA: {
       time: times.mile * 1.05,
-      notes: '4x1 Mile with 90s recovery',
+      notes: '(4x) 1 Mile with 90s recovery',
     },
     sixB: {
       time: times.fourHundredMeter * 0.9,
@@ -327,11 +328,11 @@ function App() {
     },
     eightB: {
       time: timesAfter.eightHundredMeter * 1.03,
-      notes: '8x800 with 3 mins recovery',
+      notes: '(8x) 800 with 3 mins recovery',
     },
     nineA: {
-      time: timesAfter.tenKEightHundredMeter,
-      notes: '2x2 mile with 5 mins recovery, then 1 mile',
+      time: timesAfter.tenKSixteenHundredMeter,
+      notes: '(2x) 2 mile with 5 mins recovery, then 1 mile',
     },
     nineB: {
       time: timesAfter.halfMSixteenHundredMeter,
@@ -339,7 +340,7 @@ function App() {
     },
     tenA: {
       time: timesAfter.sixteenHundredMeter * 1.05,
-      notes: '6x1 mile with 2 minutes recovery',
+      notes: '(6x) 1 mile with 2 minutes recovery',
     },
     elevenA: {
       time: timesAfter.sixteenHundredMeter * 1.14,
@@ -347,11 +348,11 @@ function App() {
     },
     elevenB: {
       time: timesAfter.eightHundredMeter * 1.03,
-      notes: '10x800m with 3 mins recovery',
+      notes: '(10x) 800m with 3 mins recovery',
     },
     twelveA: {
       time: timesAfter.halfMFourHundredMeter,
-      notes: '10x400m with 90s recovery',
+      notes: '(10x) 400m with 90s recovery',
     },
   }
 
@@ -449,9 +450,9 @@ function App() {
     { miles: 5, type: 'workout', workout: workouts.twelveA },
     { miles: 0, type: 'off', workout: null },
     { miles: 3, type: 'strides', workout: null },
-    { miles: 'Opt. 2-3', type: 'regular', workout: null },
-    { miles: 13.1, type: 'regular', workout: null },
-    { miles: 0, type: 'race', workout: null },
+    { miles: 2, type: 'regular', workout: null },
+    { miles: 13.1, type: 'race', workout: null },
+    { miles: 0, type: 'off', workout: null },
   ]
 
   // const halfMBefore = fiveK * 4.6
