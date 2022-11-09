@@ -209,8 +209,7 @@ const defaultTenK = {
 
 function App() {
   const initialFiveK = JSON.parse(localStorage.getItem('fiveKTimes')) || defaultFiveK
-  // const initialTenK = JSON.parse(localStorage.getItem('tenKTimes')) || defaultTenK
-  const initialTenK = defaultTenK
+  const initialTenK = JSON.parse(localStorage.getItem('tenKTimes')) || defaultTenK
 
   const [fiveK, setFiveK] = useState(timeObjToSeconds(initialFiveK))
   const [tenK, setTenK] = useState(timeObjToSeconds(initialTenK))
