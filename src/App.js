@@ -1,5 +1,6 @@
 import './App.css'
-import running from './running.svg'
+import runningIcon from './running.svg'
+import todayIcon from './today.svg'
 import { useState } from 'react'
 
 const dayTypes = {
@@ -75,12 +76,12 @@ const styles = {
     width: '100%',
   },
   dayWrapper: {
-    margin: '10px 10px 0px',
-    padding: '0px 5px 10px',
+    padding: '10px 15px',
     borderBottom: '0.05rem solid lightgray',
     display: 'flex',
     flexDirection: 'row',
     width: 'calc(100% - 30px)',
+    scrollMarginTop: '136px',
   },
   date: {
     minWidth: '50px',
@@ -140,6 +141,23 @@ const styles = {
     fontSize: 'smaller',
     width: 'fit-content',
     marginTop: '6px',
+  },
+  todayButton: {
+    zIndex: 2,
+    position: 'fixed',
+    bottom: '0px',
+    right: '0px',
+    margin: '15px',
+    width: '60px',
+    height: '60px',
+    color: 'white',
+    lineHeight: '60px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: '100px',
+    boxShadow: '0 3px 5px rgba(0, 0, 0, .4)',
+    background: 'linear-gradient(65deg, #2a9d8f, #264653)',
   }
 }
 
@@ -238,7 +256,6 @@ function App() {
   const handleFocus = (e) => e.target.select()
 
   const handleBlur = () => {
-    console.log('blur')
     setTenKTimes(addLeadingZeros(structuredClone(tenKTimes)))
     setFiveKTimes(addLeadingZeros(structuredClone(fiveKTimes)))
   }
@@ -438,11 +455,14 @@ function App() {
 
   return (
     <div className='App'>
+      <a style={styles.todayButton} href='#today'>
+        <img style={{ width: '18px', color: 'white' }} src={todayIcon} alt='running'/>
+      </a>
       <div style={styles.wrapper}>
         <div style={styles.header}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <span>Half Marathon Training Plan</span>
-            <img style={{ width: '20px', marginLeft: '10px' }} src={running} alt='running'/>
+            <img style={{ width: '20px', marginLeft: '10px' }} src={runningIcon} alt='running'/>
           </div>
           <div style={{
             display: 'flex',
@@ -517,7 +537,15 @@ function App() {
           const isToday = checkToday(startDate, index)
           const dateArr = dateToArr(startDate, index)
           return (
-            <div key={index} style={styles.dayWrapper}>
+            <div
+              id={isToday ? 'today' : index}
+              key={index}
+              style={{
+                ...styles.dayWrapper,
+                backgroundColor: type === 'off' ? '#EEEEEE' : 'unset',
+                color: type === 'off' ? '#6C757D' : 'unset'
+              }}
+            >
               <div style={isToday ? {...styles.dateToday, backgroundColor: dayTypes[type].dividerBackgroundColor } : styles.date}>
                 <div style={{fontSize: 'x-small', fontWeight: 'normal'}}>{dateArr[0]}</div>
                 <div style={{lineHeight: '14px'}}>{dateArr[1]}</div>
@@ -530,8 +558,10 @@ function App() {
               <div style={styles.detail}>
                 <div style={{
                   ...styles.dayType,
-                  color: dayTypes[type].color,
-                  backgroundColor: dayTypes[type].backgroundColor
+                  color: type === 'off' ? '#6C757D' : dayTypes[type].color,
+                  backgroundColor: dayTypes[type].backgroundColor,
+                  fontSize: type === 'off' ? 'larger' : 'unset',
+                  fontWeight: type === 'off' ? 'bold' : 'unset'
                 }}>
                   {type === 'sprints' ? dayTypes[type].texts[texts] : dayTypes[type].text}
                 </div>

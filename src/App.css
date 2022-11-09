@@ -5,8 +5,10 @@
 html,
 body,
 input,
+a,
 .App {
   font-family: 'Nunito', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .App-logo {
