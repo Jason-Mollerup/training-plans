@@ -56,6 +56,7 @@ const styles = {
     top: '0px',
     backgroundColor: 'white',
     width: '100%',
+    borderRadius: '30px 30px 0 0',
   },
   inputWrapper: {
     fontSize: 'small',
