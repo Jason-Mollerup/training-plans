@@ -68,12 +68,22 @@ const styles = {
     borderBottom: '0.01rem solid lightgray',
     margin: 0,
     textAlign: 'center',
-
+  },
+  backgroundWrapper: {
+    backgroundColor: 'black',
+    padding: '7px',
+    height: 'calc(100% - 14px)',
+    background: 'linear-gradient(65deg, #264653, #2a9d8f)',
   },
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
+    borderRadius: '30px',
+    backgroundColor: 'white',
+    overflowY: 'scroll',
+    height: '100%',
+    boxShadow: '0 3px 5px rgba(0, 0, 0, .4)',
   },
   dayWrapper: {
     padding: '10px',
@@ -463,129 +473,131 @@ function App() {
       <a style={styles.todayButton} href='#today' onClick={setScrollMargin}>
         <img style={{ width: '18px', color: 'white' }} src={todayIcon} alt='running'/>
       </a>
-      <div style={styles.wrapper}>
-        <div id='header' style={styles.header}>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <span>Half Marathon Training Plan</span>
-            <img style={{ width: '20px', marginLeft: '10px' }} src={runningIcon} alt='running'/>
-          </div>
-          <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            width: 'calc(100% - 50px)',
-            justifyContent: 'center',
-            margin: '0 25px'
-          }}>
-            <div style={styles.inputWrapper}>
-              <span>5K Time: </span>
-              <input style={styles.input}
-                type='number'
-                min='0'
-                max='24'
-                value={fiveKTimes.hours}
-                onChange={(e) => handleTime(e, 'fiveK', 'hours')}
-                onBlur={handleBlur}
-                onFocus={handleFocus}
-              /><span>:</span>
-              <input style={styles.input}
-                type='number'
-                min='0'
-                max='59'
-                value={fiveKTimes.minutes}
-                onChange={(e) => handleTime(e, 'fiveK', 'minutes')}
-                onBlur={handleBlur}
-                onFocus={handleFocus}
-              /><span>:</span>
-              <input style={styles.input}
-                type='number'
-                min='0'
-                max='59'
-                value={fiveKTimes.seconds}
-                onChange={(e) => handleTime(e, 'fiveK', 'seconds')}
-                onBlur={handleBlur}
-                onFocus={handleFocus}
-              />
+      <div style={styles.backgroundWrapper}>
+        <div style={styles.wrapper}>
+          <div id='header' style={styles.header}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <span>Half Marathon Training Plan</span>
+              <img style={{ width: '20px', marginLeft: '10px' }} src={runningIcon} alt='running'/>
             </div>
-            <div style={styles.inputWrapper}>
-              <span>10K Time: </span>
-              <input style={styles.input}
-                type='number'
-                min='0'
-                max='24'
-                value={tenKTimes.hours}
-                onChange={(e) => handleTime(e, 'tenK', 'hours')}
-                onBlur={handleBlur}
-                onFocus={handleFocus}
-              /><span>:</span>
-              <input style={styles.input}
-                type='number'
-                min='0'
-                max='59'
-                value={tenKTimes.minutes}
-                onChange={(e) => handleTime(e, 'tenK', 'minutes')}
-                onBlur={handleBlur}
-                onFocus={handleFocus}
-              /><span>:</span>
-              <input style={styles.input}
-                type='number'
-                min='0'
-                max='59'
-                value={tenKTimes.seconds}
-                onChange={(e) => handleTime(e, 'tenK', 'seconds')}
-                onBlur={handleBlur}
-                onFocus={handleFocus}
-              />
-            </div>
-          </div>
-        </div>
-        {schedule.map(({ miles, type, workout, texts }, index) => {
-          const isToday = checkToday(startDate, index)
-          const dateArr = dateToArr(startDate, index)
-          return (
-            <div
-              id={isToday ? 'today' : index}
-              key={index}
-              style={{
-                ...styles.dayWrapper,
-                backgroundColor: type === 'off' ? '#EEEEEE' : 'unset',
-                color: type === 'off' ? '#6C757D' : 'unset',
-                scrollMarginTop: scrollMarginTop,
-              }}
-            >
-              <div style={isToday ? {...styles.dateToday, backgroundColor: dayTypes[type].dividerBackgroundColor } : styles.date}>
-                <div style={{fontSize: 'x-small', fontWeight: 'normal'}}>{dateArr[0]}</div>
-                <div style={{lineHeight: '14px'}}>{dateArr[1]}</div>
-                <div style={{fontSize: 'small'}}>{dateArr[2]}</div>
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              width: 'calc(100% - 50px)',
+              justifyContent: 'center',
+              margin: '0 25px'
+            }}>
+              <div style={styles.inputWrapper}>
+                <span>5K Time: </span>
+                <input style={styles.input}
+                  type='number'
+                  min='0'
+                  max='24'
+                  value={fiveKTimes.hours}
+                  onChange={(e) => handleTime(e, 'fiveK', 'hours')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                /><span>:</span>
+                <input style={styles.input}
+                  type='number'
+                  min='0'
+                  max='59'
+                  value={fiveKTimes.minutes}
+                  onChange={(e) => handleTime(e, 'fiveK', 'minutes')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                /><span>:</span>
+                <input style={styles.input}
+                  type='number'
+                  min='0'
+                  max='59'
+                  value={fiveKTimes.seconds}
+                  onChange={(e) => handleTime(e, 'fiveK', 'seconds')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                />
               </div>
-              <div style={{
-                ...styles.divider,
-                backgroundColor: dayTypes[type].dividerBackgroundColor
-              }}/>
-              <div style={styles.detail}>
-                <div style={{
-                  ...styles.dayType,
-                  color: type === 'off' ? '#6C757D' : dayTypes[type].color,
-                  backgroundColor: dayTypes[type].backgroundColor,
-                  fontSize: type === 'off' ? 'larger' : 'unset',
-                  fontWeight: type === 'off' ? 'bold' : 'unset'
-                }}>
-                  {type === 'sprints' ? dayTypes[type].texts[texts] : dayTypes[type].text}
+              <div style={styles.inputWrapper}>
+                <span>10K Time: </span>
+                <input style={styles.input}
+                  type='number'
+                  min='0'
+                  max='24'
+                  value={tenKTimes.hours}
+                  onChange={(e) => handleTime(e, 'tenK', 'hours')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                /><span>:</span>
+                <input style={styles.input}
+                  type='number'
+                  min='0'
+                  max='59'
+                  value={tenKTimes.minutes}
+                  onChange={(e) => handleTime(e, 'tenK', 'minutes')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                /><span>:</span>
+                <input style={styles.input}
+                  type='number'
+                  min='0'
+                  max='59'
+                  value={tenKTimes.seconds}
+                  onChange={(e) => handleTime(e, 'tenK', 'seconds')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                />
+              </div>
+            </div>
+          </div>
+          {schedule.map(({ miles, type, workout, texts }, index) => {
+            const isToday = checkToday(startDate, index)
+            const dateArr = dateToArr(startDate, index)
+            return (
+              <div
+                id={isToday ? 'today' : index}
+                key={index}
+                style={{
+                  ...styles.dayWrapper,
+                  backgroundColor: type === 'off' ? '#EEEEEE' : 'unset',
+                  color: type === 'off' ? '#6C757D' : 'unset',
+                  scrollMarginTop: scrollMarginTop,
+                }}
+              >
+                <div style={isToday ? {...styles.dateToday, backgroundColor: dayTypes[type].dividerBackgroundColor } : styles.date}>
+                  <div style={{fontSize: 'x-small', fontWeight: 'normal'}}>{dateArr[0]}</div>
+                  <div style={{lineHeight: '14px'}}>{dateArr[1]}</div>
+                  <div style={{fontSize: 'small'}}>{dateArr[2]}</div>
                 </div>
-                {miles > 0 && (
-                  <div style={styles.miles}>{miles} miles</div>
-                )}
-                {workout && (
-                  <div style={styles.workoutWrapper}>
-                    <div style={styles.notes}>{workout.notes}</div>
-                    {workout.time !== null && workout.time !== 0 && (
-                      <div style={styles.time}>@ {secondsToTime(workout.time)} time</div>
-                    )}
+                <div style={{
+                  ...styles.divider,
+                  backgroundColor: dayTypes[type].dividerBackgroundColor
+                }}/>
+                <div style={styles.detail}>
+                  <div style={{
+                    ...styles.dayType,
+                    color: type === 'off' ? '#6C757D' : dayTypes[type].color,
+                    backgroundColor: dayTypes[type].backgroundColor,
+                    fontSize: type === 'off' ? 'larger' : 'unset',
+                    fontWeight: type === 'off' ? 'bold' : 'unset'
+                  }}>
+                    {type === 'sprints' ? dayTypes[type].texts[texts] : dayTypes[type].text}
                   </div>
-                )}
+                  {miles > 0 && (
+                    <div style={styles.miles}>{miles} miles</div>
+                  )}
+                  {workout && (
+                    <div style={styles.workoutWrapper}>
+                      <div style={styles.notes}>{workout.notes}</div>
+                      {workout.time !== null && workout.time !== 0 && (
+                        <div style={styles.time}>@ {secondsToTime(workout.time)} time</div>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
+        </div>
       </div>
     </div>
   )
