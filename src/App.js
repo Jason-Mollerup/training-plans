@@ -1,6 +1,7 @@
 import './App.css'
 import runningIcon from './running.svg'
 import todayIcon from './today.svg'
+import stravaIcon from './strava.svg'
 import { useState } from 'react'
 
 const dayTypes = {
@@ -168,6 +169,17 @@ const styles = {
     borderRadius: '100px',
     boxShadow: '0 3px 5px rgba(0, 0, 0, .4)',
     background: 'linear-gradient(65deg, #2a9d8f, #264653)',
+  },
+  stravaButton: {
+    zIndex: 2,
+    position: 'fixed',
+    bottom: '90px',
+    right: '0px',
+    margin: '0 25px',
+    width: '40px',
+    height: '40px',
+    borderRadius: '100px',
+    boxShadow: '0 3px 5px rgba(0, 0, 0, .4)',
   }
 }
 
@@ -472,7 +484,10 @@ function App() {
   return (
     <div className='App'>
       <a style={styles.todayButton} href='#today' onClick={setScrollMargin}>
-        <img style={{ width: '18px', color: 'white' }} src={todayIcon} alt='running'/>
+        <img style={{ width: '18px', color: 'white' }} src={todayIcon} alt='today'/>
+      </a>
+      <a style={styles.stravaButton} href='https://strava.app.link'>
+        <img style={{ width: '40px' }} src={stravaIcon} alt='strava'/>
       </a>
       <div style={styles.backgroundWrapper}>
         <div style={styles.wrapper}>
