@@ -178,7 +178,11 @@ const styles = {
     margin: '0 25px',
     width: '40px',
     height: '40px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: '100px',
+    backgroundColor: '#FC4C01',
     boxShadow: '0 3px 5px rgba(0, 0, 0, .4)',
   }
 }
@@ -487,7 +491,7 @@ function App() {
         <img style={{ width: '18px', color: 'white' }} src={todayIcon} alt='today'/>
       </a>
       <a style={styles.stravaButton} href='https://strava.app.link'>
-        <img style={{ width: '40px' }} src={stravaIcon} alt='strava'/>
+        <img style={{ width: '36px' }} src={stravaIcon} alt='strava'/>
       </a>
       <div style={styles.backgroundWrapper}>
         <div style={styles.wrapper}>
