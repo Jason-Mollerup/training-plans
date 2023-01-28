@@ -1,0 +1,218 @@
+.App {
+  text-align: center;
+}
+
+html,
+body,
+input,
+a,
+.App,
+div {
+  font-family: Nunito, sans-serif;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html {
+  position: fixed;
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  padding: 25px 0px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
+  font-size: Larger;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+
+.input-wrapper {
+  font-size: small;
+  margin: 10px 25px 0;
+}
+
+
+.time-input {
+  font-size: small;
+  outline: none;
+  border: none;
+  border-bottom: 0.01rem solid lightgray;
+  margin: 0;
+  text-align: center;
+  max-width: 30px;
+}
+
+.background-wrapper {
+  background-color: black;
+  padding: 7px;
+  height: calc(100% - 14px);
+  background: linear-gradient(65deg, #264653, #2a9d8f);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 30px;
+  background-color: white;
+  overflow-y: scroll;
+  height: 100%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
+}
+
+.day-wrapper {
+  padding: 10px;
+  border-bottom: 0.05rem solid lightgray;
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 20px);
+}
+
+.date {
+  min-width: 50px;
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.date-today {
+  min-width: 50px;
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 100px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.divider {
+  min-height: 50px;
+  margin: 0px 10px;
+  min-width: 3px;
+  border-radius: 100px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-size: small;
+}
+
+.day-type {
+  border-radius: 3px;
+  width: fit-content;
+  padding: 4px 8px;
+  color: white;
+}
+
+.miles {
+  margin-top: 10px;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.workout-wrapper {
+  margin-top: 10px;
+}
+
+.note {
+  font-size: small;
+  width: fit-content;
+}
+
+.time {
+  border-radius: 3px;
+  background-color: lightblue;
+  padding: 3px 6px;
+  font-size: smaller;
+  width: fit-content;
+  margin-top: 6px;
+}
+
+.today-button {
+  z-index: 2;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 15px;
+  width: 60px;
+  height: 60px;
+  color: white;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-radius: 100px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
+  background: linear-gradient(65deg, #2a9d8f, #264653);
+}
+
+.strava-button {
+  z-index: 2;
+  position: fixed;
+  bottom: 90px;
+  right: 0px;
+  margin: 0 25px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: #FC4C01;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
+}
