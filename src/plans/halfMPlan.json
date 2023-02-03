@@ -8,8 +8,17 @@
         "type": "regular",
         "note": "Regular run",
         "workouts": []
+      },
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 2,
+        "type": "regular",
+        "note": "Regular run",
+        "workouts": []
       }
-    ]
+    ],
+    "note": "Update your 10K time above based off of your run today"
   },
   {
     "activities": [

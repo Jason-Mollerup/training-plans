@@ -88,6 +88,129 @@ function App() {
   //   localStorage.setItem('startDate', JSON.stringify(date))
   // }
 
+  const buildSwim = () => {}
+  const buildBike = () => {}
+
+  const buildRun = (activity) => {
+    const {
+      units,
+      distance,
+      type,
+      workouts = [],
+      note = null
+    } = activity
+    const workout = workouts[0]
+    const timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
+
+    return (
+      <div className="detail">
+        {type !== 'off' && <img className='workout-icon' src={runningIcon} alt="run-icon"/>}
+        <div className="activity-inner-wrapper">
+          <div
+            className="day-type"
+            style={{
+              color:
+                type === 'off'
+                  ? '#6C757D'
+                  : runTypesAndStyles[type].style.color,
+              backgroundColor:
+                runTypesAndStyles[type].style.backgroundColor,
+              fontSize: type === 'off' ? 'larger' : 'unset',
+              fontWeight: type === 'off' ? 'bold' : 'unset'
+            }}
+          >
+            {note}
+          </div>
+          {distance > 0 && (
+            <div className="miles">
+              {distance} {units}(s)
+            </div>
+          )}
+          {workout && (
+            <div className="workout-wrapper">
+              <div className="note">{workout.note}</div>
+              <div className="time">
+                @ {secondsToTime(timeTable[workout.distance])} time
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  const buildNote = (note) => {
+    return (
+      <div className="detail">
+        <div className="activity-inner-wrapper">
+          {note}
+        </div>
+      </div>
+    )
+  }
+
+  const determineAndBuild = (activity) => {
+    switch(activity.activity) {
+      case 'swim':
+        return buildSwim(activity)
+      case 'bike':
+        return buildBike(activity)
+      case 'run':
+        return buildRun(activity)
+      default:
+        return null
+    }
+  }
+
+  const buildDay = (startDate, index, activities, note) => {
+    const type = activities[0].type
+
+    const isToday = checkToday(startDate, index)
+    const [dayText, month, dayNumber] = dateToArr(startDate, index)
+
+    const dayWrapperStyles = {
+      backgroundColor: type === 'off' ? '#EEEEEE' : 'unset',
+      color: type === 'off' ? '#6C757D' : 'unset',
+      scrollMarginTop: scrollMarginTop
+    }
+
+    const dayInnerStyles = isToday
+      ? { backgroundColor: runTypesAndStyles[type].style.dividerBackgroundColor }
+      : {}
+
+    const dividerStyles = {
+      backgroundColor: runTypesAndStyles[type].style.dividerBackgroundColor
+    }
+
+    return (
+      <div
+        id={isToday ? 'today' : index}
+        key={index}
+        className="day-wrapper"
+        style={dayWrapperStyles}
+      >
+        <div
+          className={isToday ? 'date-today' : 'date'}
+          style={dayInnerStyles}
+        >
+          <div style={{ fontSize: 'x-small', fontWeight: 'normal' }}>
+            {dayText}
+          </div>
+          <div style={{ lineHeight: '14px' }}>{month}</div>
+          <div style={{ fontSize: 'small' }}>{dayNumber}</div>
+        </div>
+        <div
+          className="divider"
+          style={dividerStyles}
+        />
+        <div className="activity-wrapper">
+          {activities.map(activity => determineAndBuild(activity))}
+          {note && buildNote(note)}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="App">
       <a className="today-button" href="#today" onClick={setScrollMargin}>
@@ -104,22 +227,9 @@ function App() {
         <div className="wrapper">
           <div id="header" className="header">
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <span>Half Marathon Training Plan</span>
-              <img
-                style={{ width: '20px', marginLeft: '10px' }}
-                src={runningIcon}
-                alt="running"
-              />
+              Half Marathon Training Plan
             </div>
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                width: 'calc(100% - 50px)',
-                justifyContent: 'center',
-                margin: '0 25px'
-              }}
-            >
+            <div className='time-input-wrapper'>
               {distances.map((distance, index) => (
                 <div
                   key={`${distance}-${index}-header`}
@@ -156,88 +266,7 @@ function App() {
               ))}
             </div>
           </div>
-          {plan.map(({ activities }, index) => {
-            const firstActivity = activities[0]
-            // destructure activity once utilizing swim bike etc
-            const {
-              units,
-              distance,
-              type,
-              workouts = [],
-              note = null
-            } = firstActivity
-            const workout = workouts[0]
-            const timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
-            const isToday = checkToday(startDate, index)
-            const [dayText, month, dayNumber] = dateToArr(startDate, index)
-            return (
-              <div
-                id={isToday ? 'today' : index}
-                key={index}
-                className="day-wrapper"
-                style={{
-                  backgroundColor: type === 'off' ? '#EEEEEE' : 'unset',
-                  color: type === 'off' ? '#6C757D' : 'unset',
-                  scrollMarginTop: scrollMarginTop
-                }}
-              >
-                <div
-                  className={isToday ? 'date-today' : 'date'}
-                  style={
-                    isToday
-                      ? {
-                          backgroundColor:
-                            runTypesAndStyles[type].style.dividerBackgroundColor
-                        }
-                      : {}
-                  }
-                >
-                  <div style={{ fontSize: 'x-small', fontWeight: 'normal' }}>
-                    {dayText}
-                  </div>
-                  <div style={{ lineHeight: '14px' }}>{month}</div>
-                  <div style={{ fontSize: 'small' }}>{dayNumber}</div>
-                </div>
-                <div
-                  className="divider"
-                  style={{
-                    backgroundColor:
-                      runTypesAndStyles[type].style.dividerBackgroundColor
-                  }}
-                />
-                <div className="detail">
-                  <div
-                    className="day-type"
-                    style={{
-                      color:
-                        type === 'off'
-                          ? '#6C757D'
-                          : runTypesAndStyles[type].style.color,
-                      backgroundColor:
-                        runTypesAndStyles[type].style.backgroundColor,
-                      fontSize: type === 'off' ? 'larger' : 'unset',
-                      fontWeight: type === 'off' ? 'bold' : 'unset'
-                    }}
-                  >
-                    {note}
-                  </div>
-                  {distance > 0 && (
-                    <div className="miles">
-                      {distance} {units}(s)
-                    </div>
-                  )}
-                  {workout && (
-                    <div className="workout-wrapper">
-                      <div className="note">{workout.note}</div>
-                      <div className="time">
-                        @ {secondsToTime(timeTable[workout.distance])} time
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )
-          })}
+          {plan.map(({ activities, note }, index) => buildDay(startDate, index, activities, note))}
         </div>
       </div>
     </div>
