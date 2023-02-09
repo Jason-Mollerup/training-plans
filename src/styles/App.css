@@ -248,3 +248,49 @@ html {
   background-color: #FC4C01;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
 }
+
+.home-wrapper {
+  background-color: #F9F9F9;
+}
+
+.home-title {
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+}
+
+.home-plans-wrapper {
+  padding: 5px;
+  display: flex;
+}
+
+.home-plan {
+  padding: 10px;
+  margin: 5px;
+  width: 160px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+}
+
+.home-plan__name {
+  font-size: large;
+}
+
+.home-plan__activities {
+  font-size: small;
+  margin-bottom: 5px;
+  color: rgb(100, 100, 100);
+  text-transform: capitalize;
+}
+
+.home-plan__duration {
+  font-size: smaller;
+  color: rgb(100, 100, 100);
+}

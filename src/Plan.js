@@ -19,7 +19,7 @@ import {
 
 const runTypesAndStyles = activityDefaults.run.types
 
-const Plan = ({ planData }) => {
+const Plan = ({ planName, planData }) => {
   // CONSTANTS
   const plan = useMemo(() => structuredClone(planData), [])
   const distances = useMemo(() => ['fiveK', 'tenK'], [])
@@ -87,17 +87,12 @@ const Plan = ({ planData }) => {
   //   localStorage.setItem('startDate', JSON.stringify(date))
   // }
 
-  const buildSwim = () => {}
-  const buildBike = () => {}
+  const buildCross = (activity, index) => {}
+  const buildSwim = (activity, index) => {}
+  const buildBike = (activity, index) => {}
 
-  const buildRun = (activity) => {
-    const {
-      units,
-      distance,
-      type,
-      workouts = [],
-      note = null
-    } = activity
+  const buildRun = (activity, index) => {
+    const { units, distance, type, workouts = [], note = null } = activity
     const workout = workouts[0]
     const timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
 
@@ -109,11 +104,19 @@ const Plan = ({ planData }) => {
     }
 
     return (
-      <div className="detail">
-        {type !== 'off' && <img className='workout-icon' src={runningIcon} alt="run-icon"/>}
+      <div key={`buildActivity${index}`} className="detail">
+        {type !== 'off' && (
+          <img className="workout-icon" src={runningIcon} alt="run-icon" />
+        )}
         <div className="activity-inner-wrapper">
-          <div className="day-type" style={dayTypeStyles}>{note}</div>
-          {distance > 0 && (<div className="miles">{distance} {units}(s)</div>)}
+          <div className="day-type" style={dayTypeStyles}>
+            {note}
+          </div>
+          {distance > 0 && (
+            <div className="miles">
+              {distance} {units}(s)
+            </div>
+          )}
           {workout && (
             <div className="workout-wrapper">
               <div className="note">{workout.note}</div>
@@ -127,24 +130,24 @@ const Plan = ({ planData }) => {
     )
   }
 
-  const buildNote = (note) => {
+  const buildNote = (note, index) => {
     return (
-      <div className="detail">
-        <div className="activity-inner-wrapper">
-          {note}
-        </div>
+      <div key={`buildNote${index}`} className="detail">
+        <div className="activity-inner-wrapper">{note}</div>
       </div>
     )
   }
 
-  const determineAndBuild = (activity) => {
-    switch(activity.activity) {
+  const determineAndBuild = (activity, index) => {
+    switch (activity.activity) {
+      case 'cross':
+        return buildCross(activity, index)
       case 'swim':
-        return buildSwim(activity)
+        return buildSwim(activity, index)
       case 'bike':
-        return buildBike(activity)
+        return buildBike(activity, index)
       case 'run':
-        return buildRun(activity)
+        return buildRun(activity, index)
       default:
         return null
     }
@@ -152,6 +155,8 @@ const Plan = ({ planData }) => {
 
   const buildDay = (startDate, index, activities, note) => {
     const type = activities[0].type
+
+    if (!runTypesAndStyles[type]) console.log(activities)
 
     const isToday = checkToday(startDate, index)
     const [dayText, month, dayNumber] = dateToArr(startDate, index)
@@ -163,7 +168,9 @@ const Plan = ({ planData }) => {
     }
 
     const dayInnerStyles = isToday
-      ? { backgroundColor: runTypesAndStyles[type].style.dividerBackgroundColor }
+      ? {
+          backgroundColor: runTypesAndStyles[type].style.dividerBackgroundColor
+        }
       : {}
 
     const dividerStyles = {
@@ -173,27 +180,21 @@ const Plan = ({ planData }) => {
     return (
       <div
         id={isToday ? 'today' : index}
-        key={index}
+        key={`buildDay${index}`}
         className="day-wrapper"
         style={dayWrapperStyles}
       >
-        <div
-          className={isToday ? 'date-today' : 'date'}
-          style={dayInnerStyles}
-        >
+        <div className={isToday ? 'date-today' : 'date'} style={dayInnerStyles}>
           <div style={{ fontSize: 'x-small', fontWeight: 'normal' }}>
             {dayText}
           </div>
           <div style={{ lineHeight: '14px' }}>{month}</div>
           <div style={{ fontSize: 'small' }}>{dayNumber}</div>
         </div>
-        <div
-          className="divider"
-          style={dividerStyles}
-        />
+        <div className="divider" style={dividerStyles} />
         <div className="activity-wrapper">
-          {activities.map(activity => determineAndBuild(activity))}
-          {note && buildNote(note)}
+          {activities.map(activity => determineAndBuild(activity, index))}
+          {note && buildNote(note, index)}
         </div>
       </div>
     )
@@ -215,9 +216,9 @@ const Plan = ({ planData }) => {
         <div className="wrapper">
           <div id="header" className="header">
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              Half Marathon Training Plan
+              {planName}
             </div>
-            <div className='time-input-wrapper'>
+            <div className="time-input-wrapper">
               {distances.map((distance, index) => (
                 <div
                   key={`${distance}-${index}-header`}
@@ -254,7 +255,9 @@ const Plan = ({ planData }) => {
               ))}
             </div>
           </div>
-          {plan.map(({ activities, note }, index) => buildDay(startDate, index, activities, note))}
+          {plan.map(({ activities, note }, index) =>
+            buildDay(startDate, index, activities, note)
+          )}
         </div>
       </div>
     </div>
