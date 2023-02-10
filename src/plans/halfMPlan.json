@@ -9,7 +9,8 @@
         "note": "Regular run",
         "workouts": []
       }
-    ]
+    ],
+    "note": "Update your plan start date and your best 5k times today. This will determine your workout paces for the first half of training."
   },
   {
     "activities": [
@@ -614,7 +615,8 @@
           }
         ]
       }
-    ]
+    ],
+    "note": "Update your best 10k time today. This will determine your pace for workouts for the rest of training."
   },
   {
     "activities": [

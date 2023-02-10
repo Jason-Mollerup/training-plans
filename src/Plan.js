@@ -20,10 +20,10 @@ import {
 
 const runTypesAndStyles = activityDefaults.run.types
 
-const Plan = ({ planName, planData }) => {
+const Plan = ({ planName, planData, planDistances }) => {
   // CONSTANTS
-  const plan = useMemo(() => structuredClone(planData), [])
-  const distances = useMemo(() => ['fiveK', 'tenK'], [])
+  const plan = useMemo(() => structuredClone(planData), [planData])
+  const distances = useMemo(() => planDistances || [], [planDistances])
   const initialTimes = useMemo(() => {
     let timeObj = {}
     distances.forEach(distance => {
@@ -35,32 +35,27 @@ const Plan = ({ planName, planData }) => {
     return timeObj
   }, [distances])
   const initialStartDate = useMemo(() => {
-    const date = localStorage.getItem('startDate')
-    return date ? JSON.parse(date) : new Date()
-  }, [])
+    const date = localStorage.getItem(`startDate${planName}`)
+    return date ? new Date(JSON.parse(date)) : new Date()
+  }, [planName])
 
   const [startDate, setStartDate] = useState(initialStartDate)
-
-  console.log(startDate.toISOString())
 
   const displayDate = useMemo(
     () => startDate.toISOString().slice(0, 10),
     [startDate]
   )
+
   const handleDate = e => {
-    console.log(e.target.value)
     const [year, month, day] = e.target.value.split('-')
     const date = new Date(year, month - 1, day)
     setStartDate(date)
+    localStorage.setItem(`startDate${planName}`, JSON.stringify(date))
   }
 
-  // STATE
   const [scrollMarginTop, setScrollMarginTop] = useState('146px')
   const [times, setTimes] = useState(initialTimes)
-  // IMPLEMENT
-  // const [startDate, setStartDate] = useState(initialStartDate)
 
-  // FUNCTIONS
   const handleFocus = e => e.target.select()
   const handleBlur = () => {
     const timesWithZeros = addLeadingZeros(structuredClone(times))
@@ -95,13 +90,6 @@ const Plan = ({ planName, planData }) => {
     setTimes(tempTimes)
     localStorage.setItem(type, JSON.stringify(tempTimes[type]))
   }
-
-  // IMPLEMENT
-  // const handleStartDate = e => {
-  //   const date = e.target.value
-  //   setStartDate(date)
-  //   localStorage.setItem('startDate', JSON.stringify(date))
-  // }
 
   const buildCross = (activity, index) => {}
   const buildSwim = (activity, index) => {}
@@ -222,62 +210,71 @@ const Plan = ({ planName, planData }) => {
     return (
       <div className={`modal-back ${modalState}`}>
         <div className="modal">
-          <img
-            src={xMarkIcon}
-            className="close-icon"
-            alt="close"
-            onClick={() => setModalState('modal-closed')}
-          />
-          <div className="modal-title modal-title--no-top">
-            Update Plan Start Date
-          </div>
-          <div>
-            <input
-              className="date-input"
-              type="date"
-              onChange={handleDate}
-              value={displayDate}
+          <div className="modal-header">
+            <div className="modal-header-text">Update Plan Details</div>
+            <img
+              src={xMarkIcon}
+              className="close-icon"
+              alt="close"
+              onClick={() => setModalState('modal-closed')}
             />
           </div>
-          {distances.length > 0 && (
-            <div className="time-input-wrapper">
-              <div className="modal-title">Update Best Times</div>
-              {distances.map((distance, index) => (
-                <div
-                  key={`${distance}-${index}-header`}
-                  className="input-wrapper"
-                >
-                  <span>{defaultTimeLabels[distance]} Time: </span>
-                  <input
-                    className="time-input"
-                    type="number"
-                    value={times[distance].hours}
-                    onChange={e => handleTime(e, distance, 'hours')}
-                    onBlur={handleBlur}
-                    onFocus={handleFocus}
-                  />
-                  <span>:</span>
-                  <input
-                    className="time-input"
-                    type="number"
-                    value={times[distance].minutes}
-                    onChange={e => handleTime(e, distance, 'minutes')}
-                    onBlur={handleBlur}
-                    onFocus={handleFocus}
-                  />
-                  <span>:</span>
-                  <input
-                    className="time-input"
-                    type="number"
-                    value={times[distance].seconds}
-                    onChange={e => handleTime(e, distance, 'seconds')}
-                    onBlur={handleBlur}
-                    onFocus={handleFocus}
-                  />
-                </div>
-              ))}
+          <div className="modal-items">
+            <div className="modal-title modal-title--no-top">
+              Plan Start Date
             </div>
-          )}
+            <div>
+              <input
+                className="date-input"
+                type="date"
+                onChange={handleDate}
+                value={displayDate}
+              />
+            </div>
+            {distances.length > 0 && (
+              <div className="time-input-wrapper">
+                <div className="modal-title">Best Times</div>
+                <div className="modal-note">
+                  Best times determine your workout pace at certain points
+                  during the plan
+                </div>
+                {distances.map((distance, index) => (
+                  <div
+                    key={`${distance}-${index}-header`}
+                    className="input-wrapper"
+                  >
+                    <span>{defaultTimeLabels[distance]} Time: </span>
+                    <input
+                      className="time-input"
+                      type="number"
+                      value={times[distance].hours}
+                      onChange={e => handleTime(e, distance, 'hours')}
+                      onBlur={handleBlur}
+                      onFocus={handleFocus}
+                    />
+                    <span>:</span>
+                    <input
+                      className="time-input"
+                      type="number"
+                      value={times[distance].minutes}
+                      onChange={e => handleTime(e, distance, 'minutes')}
+                      onBlur={handleBlur}
+                      onFocus={handleFocus}
+                    />
+                    <span>:</span>
+                    <input
+                      className="time-input"
+                      type="number"
+                      value={times[distance].seconds}
+                      onChange={e => handleTime(e, distance, 'seconds')}
+                      onBlur={handleBlur}
+                      onFocus={handleFocus}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     )

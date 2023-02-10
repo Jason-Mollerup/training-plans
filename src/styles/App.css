@@ -268,8 +268,8 @@ html {
 .home-plan {
   padding: 10px;
   margin: 5px;
-  width: 160px;
-  height: 120px;
+  width: 150px;
+  height: 102px;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
   display: flex;
@@ -281,7 +281,15 @@ html {
 }
 
 .home-plan__name {
-  font-size: large;
+  font-size: medium;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 43px;
+}
+
+.home-plan-detail {
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
 }
 
 .home-plan__activities {
@@ -334,10 +342,13 @@ html {
 .modal {
   background-color: white;
   width: 300px;
-  height: 300px;
-  margin-bottom: 100px;
+  max-height: 300px;
   border-radius: 10px;
   overflow: scroll;
+}
+
+.modal-items {
+  padding: 0 15px 15px;
 }
 
 .modal-open {
@@ -348,16 +359,29 @@ html {
   display: none;
 }
 
+.modal-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  height: 15px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0px;
+}
+
+.modal-header-text {
+  font-size: small;
+  font-style: italic;
+  color: rgb(61, 61, 61);
+}
+
 .close-icon {
   height: 15px;
   width: 15px;
-  padding: 3px;
-  margin: 10px;
   border-radius: 100px;
-  border: 1.5px solid black;
   align-self: flex-end;
   opacity: 60%;
-  margin-left: 266px;
   cursor: pointer;
 }
 
@@ -374,10 +398,19 @@ html {
 }
 
 .modal-title {
-  margin: 15px;
+  margin: 15px 0;
   padding: 5px;
-  border: 0.01rem solid rgb(190, 190, 190);
+  background-color: #264653;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
   border-radius: 5px;
+}
+
+.modal-note {
+  font-size: smaller;
+  font-style: italic;
+  margin: 0 15px;
+  color: rgb(61, 61, 61);
 }
 
 .modal-title--no-top {

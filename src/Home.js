@@ -18,7 +18,7 @@ const Home = () => {
                 component={'div'}
               >
                 <div className="home-plan__name">{name}</div>
-                <div>
+                <div className="home-plan-detail">
                   <div>
                     {activities.map((activity, activityIndex) => (
                       <div

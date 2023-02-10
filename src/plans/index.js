@@ -3,18 +3,20 @@ import fullMarathonNovicePlan from './fullMNovicePlan.json'
 
 const plans = [
   {
-    name: 'Half Marathon Plan',
-    path: 'half-marathon-plan',
+    name: 'Half Marathon',
+    path: 'half-marathon',
     duration: '12 weeks',
     activities: ['run'],
-    data: halfMarathonPlan
+    data: halfMarathonPlan,
+    distances: ['fiveK', 'tenK']
   },
   {
-    name: 'Marathon Plan - Novice',
-    path: 'marathon-plan-novice',
+    name: 'Marathon (Novice)',
+    path: 'marathon-novice',
     duration: '18 weeks',
     activities: ['run'],
-    data: fullMarathonNovicePlan
+    data: fullMarathonNovicePlan,
+    distances: null
   }
 ]
 export default plans

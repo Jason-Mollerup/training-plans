@@ -19,6 +19,7 @@ function App() {
                   key={`plan${index}`}
                   planName={plan.name}
                   planData={plan.data}
+                  planDistances={plan.distances}
                 />
               }
             />
