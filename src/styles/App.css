@@ -78,7 +78,7 @@ html {
 
 .input-wrapper {
   font-size: small;
-  margin: 10px 25px 0;
+  margin: 10px 0 0;
 }
 
 .time-input-wrapper {
@@ -250,6 +250,23 @@ html {
   box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
 }
 
+.home-icon-wrapper {
+  height: 15px;
+  position: absolute;
+  display: flex;
+  width: calc(100% - 55px);
+}
+
+.home-icon {
+  width: 15px;
+  height: 15px;
+  padding: 7px;
+  border-radius: 100px;
+  background-color: lightgray;
+  opacity: 60%;
+  cursor: pointer;
+}
+
 .home-wrapper {
   background-color: #F9F9F9;
 }
@@ -263,12 +280,13 @@ html {
 .home-plans-wrapper {
   padding: 5px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .home-plan {
   padding: 10px;
   margin: 5px;
-  width: 150px;
+  width: 142px;
   height: 102px;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
@@ -292,11 +310,22 @@ html {
   padding-top: 10px;
 }
 
-.home-plan__activities {
-  font-size: small;
-  margin-bottom: 5px;
+.home-plan-activities-wrapper {
+  font-size: smaller;
   color: rgb(100, 100, 100);
-  text-transform: capitalize;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.home-plan-activity {
+  font-size: small;
+  margin-left: 5px;
+  padding: 0 4px;
+  width: fit-content;
+  border-radius: 3px;
 }
 
 .home-plan__duration {
@@ -304,28 +333,58 @@ html {
   color: rgb(100, 100, 100);
 }
 
-.red {
+.red-border-left {
   border-left: 3.5px solid rgb(164, 33, 33);
 }
 
-.orange {
+.orange-border-left {
   border-left: 3.5px solid rgb(180, 111, 9);
 }
 
-.yellow {
+.yellow-border-left {
   border-left: 3.5px solid rgb(197, 197, 30);
 }
 
-.green {
+.green-border-left {
   border-left: 3.5px solid #2a9d8f;
 }
 
-.blue {
+.blue-border-left {
   border-left: 3.5px solid rgb(31, 31, 156);
 }
 
-.violet {
+.violet-border-left {
   border-left: 3.5px solid rgb(135, 52, 156);
+}
+
+.red-background-color {
+  background-color: rgb(164, 33, 33);
+  color: white;
+}
+
+.orange-background-color {
+  background-color: rgb(180, 111, 9);
+  color: white;
+}
+
+.yellow-background-color {
+  background-color: rgb(197, 197, 30);
+  color: white;
+}
+
+.green-background-color {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.blue-background-color {
+  background-color: rgb(31, 31, 156);
+  color: white;
+}
+
+.violet-background-color {
+  background-color: rgb(135, 52, 156);
+  color: white;
 }
 
 .modal-back {
@@ -342,7 +401,7 @@ html {
 .modal {
   background-color: white;
   width: 300px;
-  max-height: 300px;
+  max-height: 325px;
   border-radius: 10px;
   overflow: scroll;
 }
@@ -409,7 +468,6 @@ html {
 .modal-note {
   font-size: smaller;
   font-style: italic;
-  margin: 0 15px;
   color: rgb(61, 61, 61);
 }
 

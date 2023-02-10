@@ -1,8 +1,14 @@
 import swimIcon from '../icons/person-swimming-solid.svg'
 import bikeIcon from '../icons/person-biking-solid.svg'
 import runIcon from '../icons/person-running-solid.svg'
+import crossIcon from '../icons/dumbbell-solid.svg'
 
 export const activityDefaults = {
+  cross: {
+    planColor: 'orange',
+    icon: crossIcon,
+    types: {}
+  },
   swim: {
     planColor: 'blue',
     icon: swimIcon,
@@ -71,7 +77,17 @@ export const defaultTimes = {
   },
   tenK: {
     hours: '01',
-    minutes: '10',
+    minutes: '05',
+    seconds: '00'
+  },
+  halfM: {
+    hours: '02',
+    minutes: '15',
+    seconds: '00'
+  },
+  fullM: {
+    hours: '04',
+    minutes: '45',
     seconds: '00'
   }
 }

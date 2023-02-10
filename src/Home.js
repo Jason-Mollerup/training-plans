@@ -12,22 +12,27 @@ const Home = () => {
             const { planColor } = activityDefaults[activities[0]]
             return (
               <Link
-                className={`home-plan ${planColor}`}
+                className={`home-plan ${planColor}-border-left`}
                 key={'planName' + index}
                 to={path}
                 component={'div'}
               >
                 <div className="home-plan__name">{name}</div>
                 <div className="home-plan-detail">
-                  <div>
-                    {activities.map((activity, activityIndex) => (
-                      <div
-                        className="home-plan__activities"
-                        key={`pathActivity${activityIndex}`}
-                      >
-                        Focus - {activity}
-                      </div>
-                    ))}
+                  <div className="home-plan-activities-wrapper">
+                    <span>Focus: </span>
+                    {activities.map((activity, activityIndex) => {
+                      const { planColor: activityColor } =
+                        activityDefaults[activity]
+                      return (
+                        <div
+                          className={`home-plan-activity ${activityColor}-background-color`}
+                          key={`pathActivity${activityIndex}`}
+                        >
+                          {activity}
+                        </div>
+                      )
+                    })}
                   </div>
                   <div className="home-plan__duration">
                     Duration - {duration}

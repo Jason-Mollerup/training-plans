@@ -1,0 +1,1640 @@
+[
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 3,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 6,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 3,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 6,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 9,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 3,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 6,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 6,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 6,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 3,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 7,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 11,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 6,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 3,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 7,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 12,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 3,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 9,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 7,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 4,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 14,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 7,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 4,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 9,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 15,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 9,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 4,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 13.1,
+        "type": "race",
+        "note": "Half Marathon!",
+        "workouts": []
+      }
+    ],
+    "note": "All out Half Marathon! Give it your best today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 4,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 10,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 17,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 10,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 18,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 10,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 13,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 20,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 10,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 12,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 20,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 6,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 6,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 12,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 5,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 4,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 3,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 8,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "cross",
+        "units": "",
+        "distance": "",
+        "type": "regular",
+        "note": "Cross Train",
+        "workouts": []
+      }
+    ],
+    "note": "Pick some cross training to do today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 4,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 2,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 2,
+        "type": "regular",
+        "note": "Regular Run",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 26.2,
+        "type": "race",
+        "note": "Marathon!",
+        "workouts": []
+      }
+    ],
+    "note": "It's race day! Give it your best today!"
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  }
+]

@@ -1,8 +1,10 @@
 import './styles/App.css'
+import leftArrowIcon from './icons/arrow-left-solid.svg'
 import runningIcon from './icons/running.svg'
 import todayIcon from './icons/today.svg'
 import stravaIcon from './icons/strava.svg'
 import xMarkIcon from './icons/xmark-solid.svg'
+import { Link } from 'react-router-dom'
 import { useState, useMemo } from 'react'
 import {
   secondsToTime,
@@ -98,7 +100,10 @@ const Plan = ({ planName, planData, planDistances }) => {
   const buildRun = (activity, index) => {
     const { units, distance, type, workouts = [], note = null } = activity
     const workout = workouts[0]
-    const timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
+    let timeTable = null
+    if (workout && workout.baseTable) {
+      timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
+    }
 
     const dayTypeStyles = {
       color: type === 'off' ? '#6C757D' : runTypesAndStyles[type].style.color,
@@ -124,9 +129,11 @@ const Plan = ({ planName, planData, planDistances }) => {
           {workout && (
             <div className="workout-wrapper">
               <div className="note">{workout.note}</div>
-              <div className="time">
-                @ {secondsToTime(timeTable[workout.distance])} time
-              </div>
+              {timeTable && (
+                <div className="time">
+                  @ {secondsToTime(timeTable[workout.distance])} time
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -160,8 +167,6 @@ const Plan = ({ planName, planData, planDistances }) => {
   const buildDay = (startDate, index, activities, note) => {
     const type = activities[0].type
 
-    if (!runTypesAndStyles[type]) console.log(activities)
-
     const isToday = checkToday(startDate, index)
     const [dayText, month, dayNumber] = dateToArr(startDate, index)
 
@@ -177,6 +182,7 @@ const Plan = ({ planName, planData, planDistances }) => {
         }
       : {}
 
+    if (!runTypesAndStyles[type]) console.log(activities)
     const dividerStyles = {
       backgroundColor: runTypesAndStyles[type].style.dividerBackgroundColor
     }
@@ -204,7 +210,7 @@ const Plan = ({ planName, planData, planDistances }) => {
     )
   }
 
-  const [modalState, setModalState] = useState('modal-open')
+  const [modalState, setModalState] = useState('modal-closed')
 
   const buildModal = () => {
     return (
@@ -296,7 +302,18 @@ const Plan = ({ planName, planData, planDistances }) => {
       <div className="background-wrapper">
         <div className="wrapper">
           <div id="header" className="header">
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="home-icon-wrapper">
+              <Link to="/">
+                <img className="home-icon" src={leftArrowIcon} alt="back" />
+              </Link>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                width: 'calc(100% - 145px)'
+              }}
+            >
               {planName}
             </div>
             <div
