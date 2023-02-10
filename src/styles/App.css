@@ -71,6 +71,9 @@ html {
   background-color: white;
   width: 100%;
   border-radius: 30px 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .input-wrapper {
@@ -269,7 +272,7 @@ html {
   margin: 5px;
   width: 160px;
   height: 120px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
   display: flex;
   flex-direction: column;
@@ -293,4 +296,79 @@ html {
 .home-plan__duration {
   font-size: smaller;
   color: rgb(100, 100, 100);
+}
+
+.red {
+  border-left: 3.5px solid rgb(164, 33, 33);
+}
+
+.orange {
+  border-left: 3.5px solid rgb(180, 111, 9);
+}
+
+.yellow {
+  border-left: 3.5px solid rgb(197, 197, 30);
+}
+
+.green {
+  border-left: 3.5px solid #2a9d8f;
+}
+
+.blue {
+  border-left: 3.5px solid rgb(31, 31, 156);
+}
+
+.violet {
+  border-left: 3.5px solid rgb(135, 52, 156);
+}
+
+.modal-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.645);
+}
+
+.modal {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.modal-open {
+  display: flex;
+}
+
+.modal-closed {
+  display: none;
+}
+
+.close-icon {
+  height: 15px;
+  width: 15px;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 100px;
+  border: 1.5px solid black;
+  align-self: flex-end;
+  opacity: 60%;
+  margin-left: 266px;
+}
+
+.update-plan-button {
+  border-radius: 100px;
+  background-color: #264653;
+  color: white;
+  width: fit-content;
+  font-size: small;
+  margin-top: 8px;
+  padding: 2px 9px;
+  font-weight: 400;
 }

@@ -4,14 +4,17 @@ import runIcon from '../icons/person-running-solid.svg'
 
 export const activityDefaults = {
   swim: {
+    planColor: 'blue',
     icon: swimIcon,
     types: {}
   },
   bike: {
+    planColor: 'violet',
     icon: bikeIcon,
     types: {}
   },
   run: {
+    planColor: 'green',
     icon: runIcon,
     types: {
       regular: {

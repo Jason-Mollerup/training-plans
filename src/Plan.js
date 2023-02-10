@@ -2,6 +2,7 @@ import './styles/App.css'
 import runningIcon from './icons/running.svg'
 import todayIcon from './icons/today.svg'
 import stravaIcon from './icons/strava.svg'
+import xMarkIcon from './icons/xmark-solid.svg'
 import { useState, useMemo } from 'react'
 import {
   secondsToTime,
@@ -200,8 +201,62 @@ const Plan = ({ planName, planData }) => {
     )
   }
 
+  const [modalState, setModalState] = useState('modal-open')
+
+  const buildModal = () => {
+    return (
+      <div className={`modal-back ${modalState}`}>
+        <div className="modal">
+          <img
+            src={xMarkIcon}
+            className="close-icon"
+            alt="close"
+            onClick={() => setModalState('modal-closed')}
+          />
+          <div className="time-input-wrapper">
+            {distances.map((distance, index) => (
+              <div
+                key={`${distance}-${index}-header`}
+                className="input-wrapper"
+              >
+                <span>{defaultTimeLabels[distance]} Time: </span>
+                <input
+                  className="time-input"
+                  type="number"
+                  value={times[distance].hours}
+                  onChange={e => handleTime(e, distance, 'hours')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                />
+                <span>:</span>
+                <input
+                  className="time-input"
+                  type="number"
+                  value={times[distance].minutes}
+                  onChange={e => handleTime(e, distance, 'minutes')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                />
+                <span>:</span>
+                <input
+                  className="time-input"
+                  type="number"
+                  value={times[distance].seconds}
+                  onChange={e => handleTime(e, distance, 'seconds')}
+                  onBlur={handleBlur}
+                  onFocus={handleFocus}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="App">
+      {buildModal()}
       <a className="today-button" href="#today" onClick={setScrollMargin}>
         <img
           style={{ width: '18px', color: 'white' }}
@@ -218,41 +273,11 @@ const Plan = ({ planName, planData }) => {
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               {planName}
             </div>
-            <div className="time-input-wrapper">
-              {distances.map((distance, index) => (
-                <div
-                  key={`${distance}-${index}-header`}
-                  className="input-wrapper"
-                >
-                  <span>{defaultTimeLabels[distance]} Time: </span>
-                  <input
-                    className="time-input"
-                    type="number"
-                    value={times[distance].hours}
-                    onChange={e => handleTime(e, distance, 'hours')}
-                    onBlur={handleBlur}
-                    onFocus={handleFocus}
-                  />
-                  <span>:</span>
-                  <input
-                    className="time-input"
-                    type="number"
-                    value={times[distance].minutes}
-                    onChange={e => handleTime(e, distance, 'minutes')}
-                    onBlur={handleBlur}
-                    onFocus={handleFocus}
-                  />
-                  <span>:</span>
-                  <input
-                    className="time-input"
-                    type="number"
-                    value={times[distance].seconds}
-                    onChange={e => handleTime(e, distance, 'seconds')}
-                    onBlur={handleBlur}
-                    onFocus={handleFocus}
-                  />
-                </div>
-              ))}
+            <div
+              className="update-plan-button"
+              onClick={() => setModalState('modal-open')}
+            >
+              Update Plan Details
             </div>
           </div>
           {plan.map(({ activities, note }, index) =>
