@@ -34,10 +34,25 @@ const Plan = ({ planName, planData }) => {
     })
     return timeObj
   }, [distances])
-  const startDate = useMemo(() => {
+  const initialStartDate = useMemo(() => {
     const date = localStorage.getItem('startDate')
     return date ? JSON.parse(date) : new Date()
   }, [])
+
+  const [startDate, setStartDate] = useState(initialStartDate)
+
+  console.log(startDate.toISOString())
+
+  const displayDate = useMemo(
+    () => startDate.toISOString().slice(0, 10),
+    [startDate]
+  )
+  const handleDate = e => {
+    console.log(e.target.value)
+    const [year, month, day] = e.target.value.split('-')
+    const date = new Date(year, month - 1, day)
+    setStartDate(date)
+  }
 
   // STATE
   const [scrollMarginTop, setScrollMarginTop] = useState('146px')
@@ -213,42 +228,56 @@ const Plan = ({ planName, planData }) => {
             alt="close"
             onClick={() => setModalState('modal-closed')}
           />
-          <div className="time-input-wrapper">
-            {distances.map((distance, index) => (
-              <div
-                key={`${distance}-${index}-header`}
-                className="input-wrapper"
-              >
-                <span>{defaultTimeLabels[distance]} Time: </span>
-                <input
-                  className="time-input"
-                  type="number"
-                  value={times[distance].hours}
-                  onChange={e => handleTime(e, distance, 'hours')}
-                  onBlur={handleBlur}
-                  onFocus={handleFocus}
-                />
-                <span>:</span>
-                <input
-                  className="time-input"
-                  type="number"
-                  value={times[distance].minutes}
-                  onChange={e => handleTime(e, distance, 'minutes')}
-                  onBlur={handleBlur}
-                  onFocus={handleFocus}
-                />
-                <span>:</span>
-                <input
-                  className="time-input"
-                  type="number"
-                  value={times[distance].seconds}
-                  onChange={e => handleTime(e, distance, 'seconds')}
-                  onBlur={handleBlur}
-                  onFocus={handleFocus}
-                />
-              </div>
-            ))}
+          <div className="modal-title modal-title--no-top">
+            Update Plan Start Date
           </div>
+          <div>
+            <input
+              className="date-input"
+              type="date"
+              onChange={handleDate}
+              value={displayDate}
+            />
+          </div>
+          {distances.length > 0 && (
+            <div className="time-input-wrapper">
+              <div className="modal-title">Update Best Times</div>
+              {distances.map((distance, index) => (
+                <div
+                  key={`${distance}-${index}-header`}
+                  className="input-wrapper"
+                >
+                  <span>{defaultTimeLabels[distance]} Time: </span>
+                  <input
+                    className="time-input"
+                    type="number"
+                    value={times[distance].hours}
+                    onChange={e => handleTime(e, distance, 'hours')}
+                    onBlur={handleBlur}
+                    onFocus={handleFocus}
+                  />
+                  <span>:</span>
+                  <input
+                    className="time-input"
+                    type="number"
+                    value={times[distance].minutes}
+                    onChange={e => handleTime(e, distance, 'minutes')}
+                    onBlur={handleBlur}
+                    onFocus={handleFocus}
+                  />
+                  <span>:</span>
+                  <input
+                    className="time-input"
+                    type="number"
+                    value={times[distance].seconds}
+                    onChange={e => handleTime(e, distance, 'seconds')}
+                    onBlur={handleBlur}
+                    onFocus={handleFocus}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     )
