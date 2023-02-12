@@ -1,0 +1,156 @@
+[
+  {
+    "activities": [
+      {
+        "activity": "strength",
+        "units": "",
+        "distance": "",
+        "type": "race",
+        "note": "Test Day",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Inverted row (max to failure). Keep the number for future tests.",
+            "link": "https://www.youtube.com/watch?v=bHO0A4ZF_Zg"
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "2 minutes rest",
+            "link": null
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Dead arm hang (Max time). Keep the time for future tests.",
+            "link": "https://www.youtube.com/watch?v=3CEmHJXbNpc&t=3s"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "strength",
+        "units": "",
+        "distance": "",
+        "type": "workout",
+        "note": "Training Day",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Chair Assisted Pull Ups: 1/2 max inverted rows from test day 1.",
+            "link": "https://www.youtube.com/watch?v=3CEmHJXbNpc"
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "2 minutes rest",
+            "link": null
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Inverted Rows: Test day 1 + 40%",
+            "link": "https://www.youtube.com/watch?v=bHO0A4ZF_Zg"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "strength",
+        "units": "",
+        "distance": "",
+        "type": "workout",
+        "note": "Training Day",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Eccentric Pull Ups: 1/2 max inverted rows from test day 1.",
+            "link": "https://www.youtube.com/watch?v=hvhQXzJ4vhM"
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "2 minutes rest",
+            "link": null
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Inverted row: Test day 1 + 50%",
+            "link": "https://www.youtube.com/watch?v=bHO0A4ZF_Zg"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "strength",
+        "units": "",
+        "distance": "",
+        "type": "workout",
+        "note": "Training Day",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Hollow Rocks for time to failure. Keep the time for future tests.",
+            "link": "https://www.youtube.com/watch?v=6Qdh8qzxFY8"
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "2 minutes rest",
+            "link": null
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Inverted row: Test day 1 + 60%",
+            "link": "https://www.youtube.com/watch?v=bHO0A4ZF_Zg"
+          },
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "You can rest and continue then. Pause before reaching failure.",
+            "link": null
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "strength",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Repeat this program and continue to increase your max",
+            "link": null
+          }
+        ]
+      }
+    ],
+    "note": null
+  }
+]

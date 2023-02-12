@@ -1,6 +1,7 @@
 import './styles/App.css'
 import leftArrowIcon from './icons/arrow-left-solid.svg'
 import todayIcon from './icons/today.svg'
+import youtubeIcon from './icons/youtube.svg'
 import stravaIcon from './icons/strava.svg'
 import xMarkIcon from './icons/xmark-solid.svg'
 import { Link } from 'react-router-dom'
@@ -101,10 +102,10 @@ const Plan = ({ planName, planData, planDistances }) => {
       note = null
     } = activityObj
 
-    const workout = workouts[0]
+    const firstWorkout = workouts[0]
     let timeTable = null
-    if (activity === 'run' && workout && workout.baseTable) {
-      timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
+    if (activity === 'run' && firstWorkout && firstWorkout.baseTable) {
+      timeTable = getTimeTableFromWorkout(times, firstWorkout, 'tenK')
     }
 
     const dayTypeStyles = {
@@ -132,16 +133,34 @@ const Plan = ({ planName, planData, planDistances }) => {
               {distance} {units}(s)
             </div>
           )}
-          {workout && (
-            <div className="workout-wrapper">
-              <div className="note">{workout.note}</div>
-              {type === 'run' && timeTable && (
-                <div className="time">
-                  @ {secondsToTime(timeTable[workout.distance])} time
+          {workouts.map(({ note, distance, link }, workoutIndex) => {
+            return (
+              <div
+                key={`activity${index}-workout${workoutIndex}`}
+                className="workout-wrapper"
+              >
+                <div className="workout-note-and-link-wrapper">
+                  {link && (
+                    <img
+                      className="workout-video-button"
+                      onClick={() => {
+                        setVideoLink(link)
+                        setVideoModalState('modal-open')
+                      }}
+                      src={youtubeIcon}
+                      alt="video"
+                    />
+                  )}
+                  <div className="note">{note}</div>
                 </div>
-              )}
-            </div>
-          )}
+                {workoutIndex === 0 && activity === 'run' && timeTable && (
+                  <div className="time">
+                    @ {secondsToTime(timeTable[distance])} time
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </div>
       </div>
     )
@@ -197,6 +216,49 @@ const Plan = ({ planName, planData, planDistances }) => {
             buildActivity(activity, `${index}-${secondIndex}`)
           )}
           {note && buildNote(note, index)}
+        </div>
+      </div>
+    )
+  }
+
+  const [videoModalState, setVideoModalState] = useState('modal-closed')
+  const [videoLink, setVideoLink] = useState(null)
+  const createEmbeded = link => {
+    try {
+      return `https://www.youtube.com/embed/${link.split('watch?v=')[1]}`
+    } catch (e) {
+      return 'https://www.youtube.com'
+    }
+  }
+
+  const buildVideoModal = () => {
+    return (
+      <div className={`modal-back ${videoModalState}`}>
+        <div className="modal">
+          <div className="modal-header youtube-modal-header">
+            <div className="modal-header-text">Example Video</div>
+            <img
+              src={xMarkIcon}
+              className="close-icon"
+              alt="close"
+              onClick={() => {
+                const iframes = document.querySelectorAll('iframe')
+                Array.prototype.forEach.call(iframes, iframe => {
+                  iframe.contentWindow.postMessage(
+                    JSON.stringify({ event: 'command', func: 'stopVideo' }),
+                    '*'
+                  )
+                })
+                setVideoModalState('modal-closed')
+              }}
+            />
+          </div>
+          <iframe
+            allowFullScreen
+            className="youtube-video"
+            title="example-video"
+            src={createEmbeded(videoLink)}
+          />
         </div>
       </div>
     )
@@ -280,6 +342,7 @@ const Plan = ({ planName, planData, planDistances }) => {
 
   return (
     <div className="App">
+      {buildVideoModal()}
       {buildModal()}
       <a className="today-button" href="#today" onClick={setScrollMargin}>
         <img

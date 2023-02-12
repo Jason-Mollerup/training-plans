@@ -3,6 +3,7 @@ import fullMarathonNovicePlan from './fullMNovicePlan.json'
 import fullMarathonIntermediatePlan from './fullMIntermediatePlan.json'
 import fullMarathonAdvancedPlan from './fullMAdvancedPlan.json'
 import sprintBeginner from './sprintTriathalonBeginner.json'
+import pullupsBeginner from './pullupsBeginner.json'
 
 const plans = [
   {
@@ -43,6 +44,14 @@ const plans = [
     duration: '12 weeks',
     activities: ['swim', 'bike', 'run'],
     data: sprintBeginner,
+    distances: null
+  },
+  {
+    name: 'Pullups (Beginner)',
+    path: 'pullups-beginner',
+    duration: '5 day blocks',
+    activities: ['strength'],
+    data: pullupsBeginner,
     distances: null
   }
 ]

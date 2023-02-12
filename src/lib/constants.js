@@ -19,6 +19,10 @@ export const activityDefaults = {
   run: {
     planColor: 'green',
     icon: runIcon
+  },
+  strength: {
+    planColor: 'red',
+    icon: crossIcon
   }
 }
 

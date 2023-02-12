@@ -487,3 +487,22 @@ html {
   border-radius: 5px;
   padding: 3px 5px;
 }
+
+.workout-note-and-link-wrapper {
+  display: flex;
+}
+
+.workout-video-button {
+  margin-right: 8px;
+  width: 16px;
+}
+
+.youtube-modal-header {
+  margin-bottom: 0;
+}
+
+.youtube-video {
+  padding: 5px 5px 0 5px;
+  border: none;
+  width: 285px;
+}
