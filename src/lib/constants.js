@@ -6,65 +6,63 @@ import crossIcon from '../icons/dumbbell-solid.svg'
 export const activityDefaults = {
   cross: {
     planColor: 'orange',
-    icon: crossIcon,
-    types: {}
+    icon: crossIcon
   },
   swim: {
     planColor: 'blue',
-    icon: swimIcon,
-    types: {}
+    icon: swimIcon
   },
   bike: {
     planColor: 'violet',
-    icon: bikeIcon,
-    types: {}
+    icon: bikeIcon
   },
   run: {
     planColor: 'green',
-    icon: runIcon,
-    types: {
-      regular: {
-        style: {
-          dividerBackgroundColor: '#6C757D',
-          backgroundColor: '#6C757D',
-          color: 'white'
-        }
-      },
-      workout: {
-        style: {
-          dividerBackgroundColor: '#E9C46A',
-          backgroundColor: '#E9C46A',
-          color: 'white'
-        }
-      },
-      sprints: {
-        style: {
-          dividerBackgroundColor: '#E76F51',
-          backgroundColor: '#E76F51',
-          color: 'white'
-        }
-      },
-      strides: {
-        style: {
-          dividerBackgroundColor: '#2A9D8F',
-          backgroundColor: '#2A9D8F',
-          color: 'white'
-        }
-      },
-      race: {
-        style: {
-          dividerBackgroundColor: '#264653',
-          backgroundColor: '#264653',
-          color: 'white'
-        }
-      },
-      off: {
-        style: {
-          dividerBackgroundColor: '#6C757D',
-          backgroundColor: 'transparent',
-          color: 'black'
-        }
-      }
+    icon: runIcon
+  }
+}
+
+export const activityStyles = {
+  regular: {
+    style: {
+      dividerBackgroundColor: '#6C757D',
+      backgroundColor: '#6C757D',
+      color: 'white'
+    }
+  },
+  workout: {
+    style: {
+      dividerBackgroundColor: '#E9C46A',
+      backgroundColor: '#E9C46A',
+      color: 'white'
+    }
+  },
+  sprints: {
+    style: {
+      dividerBackgroundColor: '#E76F51',
+      backgroundColor: '#E76F51',
+      color: 'white'
+    }
+  },
+  strides: {
+    style: {
+      dividerBackgroundColor: '#2A9D8F',
+      backgroundColor: '#2A9D8F',
+      color: 'white'
+    }
+  },
+  race: {
+    style: {
+      dividerBackgroundColor: '#264653',
+      backgroundColor: '#264653',
+      color: 'white'
+    }
+  },
+  off: {
+    style: {
+      dividerBackgroundColor: '#6C757D',
+      backgroundColor: 'transparent',
+      color: 'black'
     }
   }
 }
