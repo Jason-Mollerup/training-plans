@@ -2,6 +2,7 @@ import halfMarathonPlan from './halfMPlan.json'
 import fullMarathonNovicePlan from './fullMNovicePlan.json'
 import fullMarathonIntermediatePlan from './fullMIntermediatePlan.json'
 import fullMarathonAdvancedPlan from './fullMAdvancedPlan.json'
+import sprintBeginner from './sprintTriathalonBeginner.json'
 
 const plans = [
   {
@@ -35,6 +36,14 @@ const plans = [
     activities: ['run'],
     data: fullMarathonAdvancedPlan,
     distances: ['tenK', 'halfM']
+  },
+  {
+    name: 'Sprint Triathalon (Beginner)',
+    path: 'sprint-triathalon-beginner',
+    duration: '12 weeks',
+    activities: ['swim', 'bike', 'run'],
+    data: sprintBeginner,
+    distances: null
   }
 ]
 export default plans

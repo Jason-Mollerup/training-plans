@@ -1,6 +1,9 @@
 import './styles/App.css'
 import leftArrowIcon from './icons/arrow-left-solid.svg'
-import runningIcon from './icons/running.svg'
+import runningIcon from './icons/person-running-solid.svg'
+import bikingIcon from './icons/person-biking-solid.svg'
+import swimmingIcon from './icons/person-swimming-solid.svg'
+import crossIcon from './icons/dumbbell-solid.svg'
 import todayIcon from './icons/today.svg'
 import stravaIcon from './icons/strava.svg'
 import xMarkIcon from './icons/xmark-solid.svg'
@@ -20,7 +23,7 @@ import {
   defaultTimeLabels
 } from './lib/constants.js'
 
-const runTypesAndStyles = activityDefaults.run.types
+const typesAndStyles = activityDefaults.run.types
 
 const Plan = ({ planName, planData, planDistances }) => {
   // CONSTANTS
@@ -93,9 +96,143 @@ const Plan = ({ planName, planData, planDistances }) => {
     localStorage.setItem(type, JSON.stringify(tempTimes[type]))
   }
 
-  const buildCross = (activity, index) => {}
-  const buildSwim = (activity, index) => {}
-  const buildBike = (activity, index) => {}
+  const buildCross = (activity, index) => {
+    const { units, distance, type, workouts = [], note = null } = activity
+    const workout = workouts[0]
+    // let timeTable = null
+    // implement bike times
+    // if (workout && workout.baseTable) {
+    //   timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
+    // }
+
+    const dayTypeStyles = {
+      color: type === 'off' ? '#6C757D' : typesAndStyles[type].style.color,
+      backgroundColor: typesAndStyles[type].style.backgroundColor,
+      fontSize: type === 'off' ? 'larger' : 'unset',
+      fontWeight: type === 'off' ? 'bold' : 'unset'
+    }
+
+    return (
+      <div key={`buildActivity${index}`} className="detail">
+        {type !== 'off' && (
+          <img className="workout-icon" src={crossIcon} alt="run-icon" />
+        )}
+        <div className="activity-inner-wrapper">
+          <div className="day-type" style={dayTypeStyles}>
+            {note}
+          </div>
+          {distance > 0 && (
+            <div className="miles">
+              {distance} {units}(s)
+            </div>
+          )}
+          {workout && (
+            <div className="workout-wrapper">
+              <div className="note">{workout.note}</div>
+              {/* implement bike time tables */}
+              {/* {timeTable && (
+                <div className="time">
+                  @ {secondsToTime(timeTable[workout.distance])} time
+                </div>
+              )} */}
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  const buildSwim = (activity, index) => {
+    const { units, distance, type, workouts = [], note = null } = activity
+    const workout = workouts[0]
+    // let timeTable = null
+    // implement bike times
+    // if (workout && workout.baseTable) {
+    //   timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
+    // }
+
+    const dayTypeStyles = {
+      color: type === 'off' ? '#6C757D' : typesAndStyles[type].style.color,
+      backgroundColor: typesAndStyles[type].style.backgroundColor,
+      fontSize: type === 'off' ? 'larger' : 'unset',
+      fontWeight: type === 'off' ? 'bold' : 'unset'
+    }
+
+    return (
+      <div key={`buildActivity${index}`} className="detail">
+        {type !== 'off' && (
+          <img className="workout-icon" src={swimmingIcon} alt="run-icon" />
+        )}
+        <div className="activity-inner-wrapper">
+          <div className="day-type" style={dayTypeStyles}>
+            {note}
+          </div>
+          {distance > 0 && (
+            <div className="miles">
+              {distance} {units}(s)
+            </div>
+          )}
+          {workout && (
+            <div className="workout-wrapper">
+              <div className="note">{workout.note}</div>
+              {/* implement bike time tables */}
+              {/* {timeTable && (
+                <div className="time">
+                  @ {secondsToTime(timeTable[workout.distance])} time
+                </div>
+              )} */}
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  const buildBike = (activity, index) => {
+    const { units, distance, type, workouts = [], note = null } = activity
+    const workout = workouts[0]
+    // let timeTable = null
+    // implement bike times
+    // if (workout && workout.baseTable) {
+    //   timeTable = getTimeTableFromWorkout(times, workout, 'tenK')
+    // }
+
+    const dayTypeStyles = {
+      color: type === 'off' ? '#6C757D' : typesAndStyles[type].style.color,
+      backgroundColor: typesAndStyles[type].style.backgroundColor,
+      fontSize: type === 'off' ? 'larger' : 'unset',
+      fontWeight: type === 'off' ? 'bold' : 'unset'
+    }
+
+    return (
+      <div key={`buildActivity${index}`} className="detail">
+        {type !== 'off' && (
+          <img className="workout-icon" src={bikingIcon} alt="run-icon" />
+        )}
+        <div className="activity-inner-wrapper">
+          <div className="day-type" style={dayTypeStyles}>
+            {note}
+          </div>
+          {distance > 0 && (
+            <div className="miles">
+              {distance} {units}(s)
+            </div>
+          )}
+          {workout && (
+            <div className="workout-wrapper">
+              <div className="note">{workout.note}</div>
+              {/* implement bike time tables */}
+              {/* {timeTable && (
+                <div className="time">
+                  @ {secondsToTime(timeTable[workout.distance])} time
+                </div>
+              )} */}
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
 
   const buildRun = (activity, index) => {
     const { units, distance, type, workouts = [], note = null } = activity
@@ -106,8 +243,8 @@ const Plan = ({ planName, planData, planDistances }) => {
     }
 
     const dayTypeStyles = {
-      color: type === 'off' ? '#6C757D' : runTypesAndStyles[type].style.color,
-      backgroundColor: runTypesAndStyles[type].style.backgroundColor,
+      color: type === 'off' ? '#6C757D' : typesAndStyles[type].style.color,
+      backgroundColor: typesAndStyles[type].style.backgroundColor,
       fontSize: type === 'off' ? 'larger' : 'unset',
       fontWeight: type === 'off' ? 'bold' : 'unset'
     }
@@ -149,16 +286,16 @@ const Plan = ({ planName, planData, planDistances }) => {
     )
   }
 
-  const determineAndBuild = (activity, index) => {
+  const determineAndBuild = (activity, index, secondIndex) => {
     switch (activity.activity) {
       case 'cross':
-        return buildCross(activity, index)
+        return buildCross(activity, `${index}-${secondIndex}`)
       case 'swim':
-        return buildSwim(activity, index)
+        return buildSwim(activity, `${index}-${secondIndex}`)
       case 'bike':
-        return buildBike(activity, index)
+        return buildBike(activity, `${index}-${secondIndex}`)
       case 'run':
-        return buildRun(activity, index)
+        return buildRun(activity, `${index}-${secondIndex}`)
       default:
         return null
     }
@@ -178,13 +315,13 @@ const Plan = ({ planName, planData, planDistances }) => {
 
     const dayInnerStyles = isToday
       ? {
-          backgroundColor: runTypesAndStyles[type].style.dividerBackgroundColor
+          backgroundColor: typesAndStyles[type].style.dividerBackgroundColor
         }
       : {}
 
-    if (!runTypesAndStyles[type]) console.log(activities)
+    if (!typesAndStyles[type]) console.log(activities)
     const dividerStyles = {
-      backgroundColor: runTypesAndStyles[type].style.dividerBackgroundColor
+      backgroundColor: typesAndStyles[type].style.dividerBackgroundColor
     }
 
     return (
@@ -203,7 +340,9 @@ const Plan = ({ planName, planData, planDistances }) => {
         </div>
         <div className="divider" style={dividerStyles} />
         <div className="activity-wrapper">
-          {activities.map(activity => determineAndBuild(activity, index))}
+          {activities.map((activity, secondIndex) =>
+            determineAndBuild(activity, index, secondIndex)
+          )}
           {note && buildNote(note, index)}
         </div>
       </div>

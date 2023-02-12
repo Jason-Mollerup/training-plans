@@ -200,6 +200,8 @@ html {
   flex-direction: column;
   align-self: center;
   font-size: small;
+  width: 100%;
+  margin-left: 10px;
 }
 
 .note {
@@ -281,6 +283,7 @@ html {
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .home-plan {
@@ -318,6 +321,10 @@ html {
   flex-wrap: wrap;
   width: 100%;
   align-items: flex-end;
+}
+
+.home-plan-activities-wrapper .home-plan-activity:first-child {
+  margin-left: 0;
 }
 
 .home-plan-activity {

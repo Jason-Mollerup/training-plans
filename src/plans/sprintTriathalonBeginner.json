@@ -1,0 +1,1564 @@
+[
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "40 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 20 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 45,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 30 minute medium effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 25 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 25,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "25 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "40 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 20 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 55,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute medium effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 30 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 30,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "30 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "40 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 20 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 60,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 45 minute medium effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 30 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 25,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "5 minute warm up, swim 4 x 3 minutes at a hard effort with 1 minute recovery between sets, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 55,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute easy effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 30 minute medium effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 30,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "warm up 5 minutes, swim 4 x 4 minutes at a medium effort with 1 minute recovery between sets, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 45,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "45 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 30,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 15 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 50,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 35 minute medium effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 30 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "warm up 5 minutes, swim 4 x 5 minutes at a medium effort with 1 minute recovery between sets, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 45,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "45 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 20 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 55,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute medium effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 50,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 30,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "warm up 5 minutes, swim 4 x 4 minutes at a medium effort with 1 minute recovery between sets, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 45,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "45 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 20 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 60,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute medium effort, 5 minute hard effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 50,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 25,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "5 minute warm up, swim 15 minutes steady medium hard effort, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 20 minute easy effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 60,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 45 sustained hard effort, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "warm up 5 minutes, swim 4 x 5 minutes at a medium hard effort with 1 minute recovery between sets, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 45,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "45 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 25 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 55,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute medium effort, 5 minute cool down"
+          }
+        ]
+      },
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 10,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Immediately transition to running shoes, 10 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 30 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "warm up 5 minutes, swim 4 x 5 minutes at a medium hard effort with 1 minute recovery between sets, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "40 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 45,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 30 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 65,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 45 minute medium effort, 10 minute cool down"
+          }
+        ]
+      },
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 10,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Immediately transition to running shoes, 10 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 50,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 30,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "warm up 5 minutes, swim 4 x 4 minutes at a medium effort with 1 minute recovery between sets, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 30,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "30 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 35,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 20 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 20,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "20 minute easy swim, taking breaks as needed"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 55,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 40 minute medium effort, 5 minute cool down"
+          }
+        ]
+      },
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 10,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "Immediately transition to running shoes, 10 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 40,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 30 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 30,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute warm up, 15 minute easy run, 5 minute cool down"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 45,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "45 minute easy bike"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 30,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "warm up 5 minutes, swim 4 x 3 minutes at a easy effort with 1 minute recovery between sets, cool down 5 minutes"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "run",
+        "units": "",
+        "distance": "",
+        "type": "off",
+        "note": "OFF DAY!",
+        "workouts": []
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "minute",
+        "distance": 10,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute easy swim"
+          }
+        ]
+      },
+      {
+        "activity": "bike",
+        "units": "minute",
+        "distance": 10,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute easy bike"
+          }
+        ]
+      },
+      {
+        "activity": "run",
+        "units": "minute",
+        "distance": 10,
+        "type": "regular",
+        "note": "Run",
+        "workouts": [
+          {
+            "baseTable": null,
+            "distance": null,
+            "note": "10 minute easy run"
+          }
+        ]
+      }
+    ],
+    "note": null
+  },
+  {
+    "activities": [
+      {
+        "activity": "swim",
+        "units": "meter",
+        "distance": 750,
+        "type": "regular",
+        "note": "Swim",
+        "workouts": []
+      },
+      {
+        "activity": "bike",
+        "units": "mile",
+        "distance": 12,
+        "type": "regular",
+        "note": "Bike",
+        "workouts": []
+      },
+      {
+        "activity": "run",
+        "units": "mile",
+        "distance": 3.1,
+        "type": "regular",
+        "note": "Run",
+        "workouts": []
+      }
+    ],
+    "note": "Race Day! Give it your best and have fun!\n\n"
+  }
+]

@@ -20,7 +20,6 @@ const Home = () => {
                 <div className="home-plan__name">{name}</div>
                 <div className="home-plan-detail">
                   <div className="home-plan-activities-wrapper">
-                    <span>Focus: </span>
                     {activities.map((activity, activityIndex) => {
                       const { planColor: activityColor } =
                         activityDefaults[activity]
